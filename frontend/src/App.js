@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------
+// FILE: frontend/src/App.js
+// Replace the entire content of your App.js with this updated code.
+// -----------------------------------------------------------------
 import React, { useState, useEffect, useRef } from 'react';
 import { FaGraduationCap, FaPaperPlane, FaUniversity, FaBookOpen, FaUsers, FaChalkboardTeacher } from 'react-icons/fa';
 import './App.css';
@@ -6,13 +10,16 @@ function App() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const chatWindowRef = useRef(null);
 
-  // Add a welcome message when the component loads
+  const chatWindowRef = useRef(null);
+  const inputRef = useRef(null);
+
+  // Add a welcome message and focus input on initial load
   useEffect(() => {
     setMessages([
       { text: "Hello! I am the Ask PU chatbot. How can I assist you today?", sender: 'bot' }
     ]);
+    inputRef.current.focus();
   }, []);
 
   // Effect to scroll down when new messages are added
@@ -22,14 +29,30 @@ function App() {
     }
   }, [messages, isTyping]);
 
-  // Function to handle sending a message (either from input or suggestion chip)
+  // --- NEW: A dedicated effect to handle refocusing the input ---
+  // This is a more reliable method.
+  useEffect(() => {
+    // This effect runs whenever 'isTyping' changes.
+    // We only want to focus when the bot has FINISHED typing.
+    if (!isTyping) {
+      // Use a timeout to ensure the DOM has updated and the input is no longer disabled
+      setTimeout(() => {
+        if (inputRef.current) {
+          inputRef.current.focus();
+        }
+      }, 0);
+    }
+  }, [isTyping]);
+
+
+  // Function to handle sending a message
   const handleSend = async (messageText = input) => {
     if (!messageText.trim()) return;
 
     const userMessage = { text: messageText, sender: 'user' };
     setMessages(prevMessages => [...prevMessages, userMessage]);
     setIsTyping(true);
-    setInput(''); // Clear input field
+    setInput('');
 
     try {
       const response = await fetch('http://127.0.0.1:8000/api/chat/', {
@@ -50,6 +73,7 @@ function App() {
       setMessages(prevMessages => [...prevMessages, errorMessage]);
     } finally {
       setIsTyping(false);
+      // The focus logic has been moved to the new useEffect hook above
     }
   };
 
@@ -106,7 +130,6 @@ function App() {
             </div>
           )}
 
-          {/* Show suggestions only at the start of the conversation */}
           {messages.length <= 1 && (
              <div className="suggestions">
                 <p className="sub-heading">Suggested Common Questions</p>
@@ -123,6 +146,7 @@ function App() {
 
         <footer className="chat-input-area">
           <input
+            ref={inputRef}
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}

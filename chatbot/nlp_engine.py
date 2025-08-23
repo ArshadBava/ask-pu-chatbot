@@ -1,6 +1,7 @@
 import json
 import random
 import os
+from thefuzz import fuzz # <-- Import the fuzz library
 
 # Build the path to intents.json dynamically
 intents_file_path = os.path.join(os.path.dirname(__file__), 'intents.json')
@@ -18,39 +19,37 @@ DEFAULT_RESPONSES = {
 
 def get_bot_response(user_message):
     """
-    Analyzes the user's message and returns the best response from the intents.
-    The language is determined by which pattern matches.
+    Analyzes the user's message using fuzzy string matching to find the best response.
     """
-    user_words = set(user_message.lower().split())
-
+    # --- NEW: Fuzzy Matching Logic ---
     best_match_score = 0
     best_match_tag = None
     detected_language = 'en' # Default to English
+
+    # A threshold to ensure the match is good enough
+    MATCH_THRESHOLD = 70 # Score out of 100
 
     # Iterate through each intent to find the best match
     for intent in intents_data['intents']:
         # Iterate through each language's patterns in the intent
         for lang, patterns in intent['patterns'].items():
             for pattern in patterns:
-                pattern_words = set(pattern.lower().split())
-                common_words = user_words.intersection(pattern_words)
-                score = len(common_words)
+                # Calculate the similarity score between the user's message and the pattern
+                score = fuzz.token_set_ratio(user_message.lower(), pattern.lower())
 
                 # Update best match if this pattern is better
                 if score > best_match_score:
                     best_match_score = score
                     best_match_tag = intent['tag']
-                    detected_language = lang # The language of the matched pattern!
+                    detected_language = lang
 
-    # If a good match is found, return a response in the detected language
-    if best_match_score > 0:
+    # If a good enough match is found, return a response in the detected language
+    if best_match_score >= MATCH_THRESHOLD:
         for intent in intents_data['intents']:
             if intent['tag'] == best_match_tag:
-                # Get a random response for the detected language
                 return random.choice(intent['responses'][detected_language])
 
-    # If no match is found, return a default response (we can guess or just use English)
-    # For simplicity, we'll just use the English default for now.
+    # If no good match is found, return a default response
     return DEFAULT_RESPONSES['en']
 
 
