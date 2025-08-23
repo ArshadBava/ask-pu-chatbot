@@ -1,0 +1,69 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": {
+        "en": ["hi", "hello", "hey", "good morning"],
+        "hi": ["नमस्ते", "नमस्ते जी"],
+        "ml": ["ഹായ്", "നമസ്കാരം"]
+      },
+      "responses": {
+        "en": ["Hello! Welcome to the Ask PU chatbot. How can I assist you today?", "Hi there! How can I help you?"],
+        "hi": ["नमस्ते! Ask PU चैटबॉट में आपका स्वागत है। मैं आपकी कैसे मदद कर सकता हूँ?"],
+        "ml": ["നമസ്കാരം! Ask PU ചാറ്റ്ബോട്ടിലേക്ക് സ്വാഗതം. ഞാൻ നിങ്ങളെ എങ്ങനെ സഹായിക്കണം?"]
+      }
+    },
+    {
+      "tag": "goodbye",
+      "patterns": {
+        "en": ["bye", "goodbye", "see you later"],
+        "hi": ["अलविदा", "फिर मिलेंगे"],
+        "ml": ["ബൈ", "പോയിട്ട് വരാം"]
+      },
+      "responses": {
+        "en": ["Goodbye! Have a great day.", "See you later!"],
+        "hi": ["अलविदा! आपका दिन शुभ हो।"],
+        "ml": ["വിട! ഒരു നല്ല ദിനം ആശംസിക്കുന്നു."]
+      }
+    },
+    {
+      "tag": "thanks",
+      "patterns": {
+        "en": ["thanks", "thank you", "helpful"],
+        "hi": ["dhanyavaad", "धन्यवाद", "शुक्रिया"],
+        "ml": ["നന്ദി", "വളരെ ഉപകാരം"]
+      },
+      "responses": {
+        "en": ["You're welcome!", "Happy to help!"],
+        "hi": ["आपका स्वागत है!", "मदद करके खुशी हुई!"],
+        "ml": ["സഹായിക്കാൻ കഴിഞ്ഞതിൽ സന്തോഷമുണ്ട്.", "welcome!"]
+      }
+    },
+    {
+      "tag": "admission_query",
+      "patterns": {
+        "en": ["apply for admission", "admission requirements", "admission process", "admission start"],
+        "hi": ["एडमिशन कैसे मिलेगा", "प्रवेश प्रक्रिया क्या है"],
+        "ml": ["പ്രവേശനം എപ്പോൾ ആരംഭിക്കും", "അഡ്മിഷൻ എങ്ങനെയാണ്"]
+      },
+      "responses": {
+        "en": ["Admissions for most PG courses typically start around May. You can find detailed information on the official Pondicherry University website under the 'Admissions' section."],
+        "hi": ["अधिकांश पीजी पाठ्यक्रमों के लिए प्रवेश आम तौर पर मई के आसपास शुरू होते हैं। आप विस्तृत जानकारी पांडिचेरी विश्वविद्यालय की आधिकारिक वेबसाइट पर 'प्रवेश' अनुभाग के तहत पा सकते हैं।"],
+        "ml": ["മിക്ക പിജി കോഴ്‌സുകളിലേക്കും സാധാരണയായി മെയ് മാസത്തിലാണ് പ്രവേശനം ആരംഭിക്കുന്നത്. വിശദമായ വിവരങ്ങൾ പോണ്ടിച്ചേരി സർവകലാശാലയുടെ ഔദ്യോഗിക വെബ്സൈറ്റിലെ 'അഡ്മിഷൻസ്' വിഭാഗം സന്ദർശിക്കുക."]
+      }
+    },
+    {
+      "tag": "fee_structure",
+      "patterns": {
+        "en": ["fee structure", "tuition fees", "fees for mca"],
+        "hi": ["फीस कितनी है", "एमसीए की फीस क्या है"],
+        "ml": ["ഫീസ് ഘടന എന്താണ്", "എംസിഎ ഫീസ് എത്രയാണ്"]
+      },
+      "responses": {
+        "en": ["The fee structure varies for each course. You can find a detailed breakdown on the university's official website in the latest prospectus."],
+        "hi": ["प्रत्येक पाठ्यक्रम के लिए शुल्क संरचना अलग-अलग है। आप विस्तृत विवरण विश्वविद्यालय की आधिकारिक वेबसाइट पर नवीनतम प्रॉस्पेक्टस में पा सकते हैं।"],
+        "ml": ["ഓരോ കോഴ്സിനും ഫീസ് ഘടന വ്യത്യസ്തമാണ്. എല്ലാ കോഴ്സുകളുടെയും ഫീസ് വിവരങ്ങൾ സർവകലാശാലയുടെ ഔദ്യോഗിക വെബ്സൈറ്റിൽ നിന്ന് ഡൗൺലോഡ് ചെയ്യാവുന്ന പ്രോസ്പെക്ടസിൽ ലഭ്യമാണ്."]
+      }
+    }
+  ]
+}
