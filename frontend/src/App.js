@@ -1,19 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { FaGraduationCap, FaPaperPlane, FaUniversity, FaBookOpen, FaUsers, FaChalkboardTeacher } from 'react-icons/fa';
 import './App.css';
 
 function App() {
-  // State for messages and user input
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
-  const [isTyping, setIsTyping] = useState(false); // State to show bot is "typing"
-
-  // Ref to automatically scroll to the latest message
+  const [isTyping, setIsTyping] = useState(false);
   const chatWindowRef = useRef(null);
 
   // Add a welcome message when the component loads
   useEffect(() => {
     setMessages([
-      { text: "Hello! I am the Ask PU chatbot. How can I help you today?", sender: 'bot' }
+      { text: "Hello! I am the Ask PU chatbot. How can I assist you today?", sender: 'bot' }
     ]);
   }, []);
 
@@ -22,47 +20,36 @@ function App() {
     if (chatWindowRef.current) {
       chatWindowRef.current.scrollTop = chatWindowRef.current.scrollHeight;
     }
-  }, [messages]);
+  }, [messages, isTyping]);
 
+  // Function to handle sending a message (either from input or suggestion chip)
+  const handleSend = async (messageText = input) => {
+    if (!messageText.trim()) return;
 
-  // Function to handle sending a message
-  const handleSend = async () => {
-    if (input.trim()) {
-      const userMessage = { text: input, sender: 'user' };
-      // Add user's message and show typing indicator
-      setMessages(prevMessages => [...prevMessages, userMessage]);
-      setIsTyping(true);
-      setInput('');
+    const userMessage = { text: messageText, sender: 'user' };
+    setMessages(prevMessages => [...prevMessages, userMessage]);
+    setIsTyping(true);
+    setInput(''); // Clear input field
 
-      // --- API CALL TO THE BACKEND ---
-      try {
-        const response = await fetch('http://127.0.0.1:8000/api/chat/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ message: input }),
-        });
+    try {
+      const response = await fetch('http://127.0.0.1:8000/api/chat/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: messageText }),
+      });
 
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
+      if (!response.ok) throw new Error('Network response was not ok');
 
-        const data = await response.json();
-        const botMessage = { text: data.response, sender: 'bot' };
+      const data = await response.json();
+      const botMessage = { text: data.response, sender: 'bot' };
+      setMessages(prevMessages => [...prevMessages, botMessage]);
 
-        // Add the bot's response and hide typing indicator
-        setMessages(prevMessages => [...prevMessages, botMessage]);
-
-      } catch (error) {
-        console.error("There was an error sending the message:", error);
-        // Add an error message to the chat
-        const errorMessage = { text: "Sorry, I'm having trouble connecting. Please try again later.", sender: 'bot' };
-        setMessages(prevMessages => [...prevMessages, errorMessage]);
-      } finally {
-        setIsTyping(false);
-      }
-      // -----------------------------
+    } catch (error) {
+      console.error("There was an error sending the message:", error);
+      const errorMessage = { text: "Sorry, I'm having trouble connecting. Please try again later.", sender: 'bot' };
+      setMessages(prevMessages => [...prevMessages, errorMessage]);
+    } finally {
+      setIsTyping(false);
     }
   };
 
@@ -73,35 +60,80 @@ function App() {
     }
   };
 
+  // Data for suggestion chips
+  const suggestions = [
+    { text: 'Admissions', icon: <FaUniversity /> },
+    { text: 'Fee Structure', icon: <FaBookOpen /> },
+    { text: 'Student Services', icon: <FaUsers /> },
+    { text: 'Faculty Directory', icon: <FaChalkboardTeacher /> },
+  ];
+
   return (
-    <div className="App">
-      <header className="header">
-        <h1>Ask PU Chatbot</h1>
-        <p>Your AI assistant for Pondicherry University</p>
-      </header>
-      <div className="chat-window" ref={chatWindowRef}>
-        {messages.map((msg, index) => (
-          <div key={index} className={`message ${msg.sender}`}>
-            <p>{msg.text}</p>
+    <div className="mobile-frame">
+      <div className="chat-container">
+        <header className="chat-header">
+          <div className="logo">
+            <FaGraduationCap />
           </div>
-        ))}
-        {/* Show the typing indicator when the bot is "thinking" */}
-        {isTyping && (
-          <div className="message bot">
-            <p><i>Typing...</i></p>
-          </div>
-        )}
-      </div>
-      <div className="input-area">
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyPress={handleKeyPress}
-          placeholder="Type your message..."
-          disabled={isTyping} // Disable input while bot is typing
-        />
-        <button onClick={handleSend} disabled={isTyping}>Send</button>
+          <h1>AskPU</h1>
+          <p className="greeting">Your AI assistant for Pondicherry University</p>
+        </header>
+
+        <main className="chat-log" ref={chatWindowRef}>
+          {messages.map((msg, index) => (
+            <div key={index} className={`chat-message ${msg.sender}`}>
+              {msg.sender === 'bot' && (
+                <div className="avatar">
+                  <FaGraduationCap />
+                </div>
+              )}
+              <div className="message-bubble">
+                <p>{msg.text}</p>
+              </div>
+            </div>
+          ))}
+
+          {isTyping && (
+            <div className="chat-message bot">
+              <div className="avatar">
+                <FaGraduationCap />
+              </div>
+              <div className="message-bubble">
+                <div className="typing-indicator">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Show suggestions only at the start of the conversation */}
+          {messages.length <= 1 && (
+             <div className="suggestions">
+                <p className="sub-heading">Suggested Common Questions</p>
+                <div className="suggestion-chips">
+                  {suggestions.map((s, i) => (
+                    <button key={i} onClick={() => handleSend(s.text)}>
+                      {s.icon} {s.text}
+                    </button>
+                  ))}
+                </div>
+              </div>
+          )}
+        </main>
+
+        <footer className="chat-input-area">
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyPress={handleKeyPress}
+            placeholder="Type your question..."
+            disabled={isTyping}
+          />
+          <button className="icon-btn send-btn" onClick={() => handleSend()} disabled={!input.trim() || isTyping}>
+            <FaPaperPlane />
+          </button>
+        </footer>
       </div>
     </div>
   );

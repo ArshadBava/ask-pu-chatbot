@@ -76,10 +76,16 @@ WSGI_APPLICATION = 'askpu_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# In askpu_backend/settings.py
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'askpu_db',         # The name of the database you created
+        'USER': 'postgres',         # The default superuser for PostgreSQL
+        'PASSWORD': '#Arzd1729#', # <-- IMPORTANT: Replace with the password you set during installation
+        'HOST': 'localhost',        # Or '127.0.0.1'
+        'PORT': '5432',
     }
 }
 
