@@ -40,29 +40,94 @@
       }
     },
     {
-      "tag": "admission_query",
+      "tag": "admission_general",
       "patterns": {
-        "en": ["apply for admission", "admission requirements", "admission process", "admission start"],
+        "en": ["how to apply for admission", "admission requirements", "admission process", "when does admission start"],
         "hi": ["एडमिशन कैसे मिलेगा", "प्रवेश प्रक्रिया क्या है"],
         "ml": ["പ്രവേശനം എപ്പോൾ ആരംഭിക്കും", "അഡ്മിഷൻ എങ്ങനെയാണ്"]
       },
       "responses": {
-        "en": ["Admissions for most PG courses typically start around May. You can find detailed information on the official Pondicherry University website under the 'Admissions' section."],
+        "en": ["Admissions for most PG courses typically start around May. You can find detailed information and the application portal on the official Pondicherry University website under the 'Admissions' section."],
         "hi": ["अधिकांश पीजी पाठ्यक्रमों के लिए प्रवेश आम तौर पर मई के आसपास शुरू होते हैं। आप विस्तृत जानकारी पांडिचेरी विश्वविद्यालय की आधिकारिक वेबसाइट पर 'प्रवेश' अनुभाग के तहत पा सकते हैं।"],
         "ml": ["മിക്ക പിജി കോഴ്‌സുകളിലേക്കും സാധാരണയായി മെയ് മാസത്തിലാണ് പ്രവേശനം ആരംഭിക്കുന്നത്. വിശദമായ വിവരങ്ങൾ പോണ്ടിച്ചേരി സർവകലാശാലയുടെ ഔദ്യോഗിക വെബ്സൈറ്റിലെ 'അഡ്മിഷൻസ്' വിഭാഗം സന്ദർശിക്കുക."]
       }
     },
     {
-      "tag": "fee_structure",
+      "tag": "fee_structure_general",
       "patterns": {
-        "en": ["fee structure", "tuition fees", "fees for mca"],
-        "hi": ["फीस कितनी है", "एमसीए की फीस क्या है"],
-        "ml": ["ഫീസ് ഘടന എന്താണ്", "എംസിഎ ഫീസ് എത്രയാണ്"]
+        "en": ["what is the general fee structure", "tuition fees overview"],
+        "hi": ["फीस की जानकारी दें", "सामान्य फीस क्या है"],
+        "ml": ["ഫീസ് ഘടനയെക്കുറിച്ച് പറയാമോ", "പൊതുവായ ഫീസ് വിവരങ്ങൾ"]
       },
       "responses": {
-        "en": ["The fee structure varies for each course. You can find a detailed breakdown on the university's official website in the latest prospectus."],
-        "hi": ["प्रत्येक पाठ्यक्रम के लिए शुल्क संरचना अलग-अलग है। आप विस्तृत विवरण विश्वविद्यालय की आधिकारिक वेबसाइट पर नवीनतम प्रॉस्पेक्टस में पा सकते हैं।"],
-        "ml": ["ഓരോ കോഴ്സിനും ഫീസ് ഘടന വ്യത്യസ്തമാണ്. എല്ലാ കോഴ്സുകളുടെയും ഫീസ് വിവരങ്ങൾ സർവകലാശാലയുടെ ഔദ്യോഗിക വെബ്സൈറ്റിൽ നിന്ന് ഡൗൺലോഡ് ചെയ്യാവുന്ന പ്രോസ്പെക്ടസിൽ ലഭ്യമാണ്."]
+        "en": ["The fee structure varies for each course. You can find a detailed breakdown on the university's official website in the latest prospectus. Do you want to know the fee for a specific course?"],
+        "hi": ["प्रत्येक पाठ्यक्रम के लिए शुल्क संरचना अलग-अलग है। आप विस्तृत विवरण विश्वविद्यालय की आधिकारिक वेबसाइट पर नवीनतम प्रॉस्पेक्टस में पा सकते हैं। क्या आप किसी विशिष्ट कोर्स की फीस जानना चाहते हैं?"],
+        "ml": ["ഓരോ കോഴ്സിനും ഫീസ് ഘടന വ്യത്യസ്തമാണ്. എല്ലാ കോഴ്സുകളുടെയും ഫീസ് വിവരങ്ങൾ സർവകലാശാലയുടെ ഔദ്യോഗിക വെബ്സൈറ്റിൽ നിന്ന് ഡൗൺലോഡ് ചെയ്യാവുന്ന പ്രോസ്പെക്ടസിൽ ലഭ്യമാണ്. ഏതെങ്കിലും പ്രത്യേക കോഴ്സിൻ്റെ ഫീസ് അറിയണോ?"]
+      }
+    },
+    {
+      "tag": "hostel_info_general",
+      "patterns": {
+        "en": ["hostel information", "tell me about hostels", "hostel facilities"],
+        "hi": ["हॉस्टल की जानकारी", "हॉस्टल के बारे में बताएं"],
+        "ml": ["ഹോസ്റ്റൽ വിവരങ്ങൾ", "ഹോസ്റ്റലിനെക്കുറിച്ച് പറയൂ"]
+      },
+      "responses": {
+        "en": ["The university has 21 hostels on campus. Dining in the hostel mess is compulsory. Ragging is strictly prohibited. For detailed rules and fees, please check the university website."],
+        "hi": ["विश्वविद्यालय में 21 छात्रावास हैं। छात्रावास मेस में भोजन करना अनिवार्य है। रैगिंग सख्त वर्जित है। विस्तृत नियमों और शुल्क के लिए, कृपया विश्वविद्यालय की वेबसाइट देखें।"],
+        "ml": ["സർവകലാശാലയിൽ 21 ഹോസ്റ്റലുകൾ ഉണ്ട്. ഹോസ്റ്റൽ മെസ്സിലെ ഭക്ഷണം നിർബന്ധമാണ്. റാഗിംഗ് കർശനമായി നിരോധിച്ചിരിക്കുന്നു. വിശദമായ നിയമങ്ങൾക്കും ഫീസിനും ദയവായി സർവകലാശാല വെബ്സൈറ്റ് പരിശോധിക്കുക."]
+      }
+    },
+    {
+      "tag": "course_mca_fees",
+      "patterns": {
+        "en": ["mca fees", "fee for mca", "master of computer applications fee"],
+        "hi": ["एमसीए की फीस", "एमसीए की फीस क्या है"],
+        "ml": ["എംസിഎ ഫീസ്", "എംസിഎ ഫീസ് എത്രയാണ്"]
+      },
+      "responses": {
+        "en": ["The total fee for the first semester of the MCA program is ₹34,342."],
+        "hi": ["एमसीए कार्यक्रम के पहले सेमेस्टर के लिए कुल शुल्क ₹34,342 है।"],
+        "ml": ["എംസിഎ പ്രോഗ്രാമിന്റെ ഒന്നാം സെമസ്റ്ററിലെ ആകെ ഫീസ് ₹34,342 ആണ്."]
+      }
+    },
+     {
+      "tag": "course_mca_eligibility",
+      "patterns": {
+        "en": ["mca eligibility", "eligibility for mca", "requirements for mca"],
+        "hi": ["एमसीए के लिए पात्रता", "एमसीए पात्रता"],
+        "ml": ["എംസിഎ യോഗ്യത", "എംസിഎക്ക് എന്ത് യോഗ്യത വേണം"]
+      },
+      "responses": {
+        "en": ["For the MCA program, the eligibility is: A Bachelor's degree in Computer Applications/Science/IT OR a Bachelor's in Commerce/Economics/Business Administration with Mathematics/Statistics OR a Bachelor's in Science with Math/Statistics, all requiring a minimum of 55% marks."],
+        "hi": ["एमसीए कार्यक्रम के लिए, पात्रता है: कंप्यूटर एप्लीकेशन/विज्ञान/आईटी में स्नातक की डिग्री या गणित/सांख्यिकी के साथ वाणिज्य/अर्थशास्त्र/बिजनेस एडमिनिस्ट्रेशन में स्नातक या विज्ञान में स्नातक, सभी में न्यूनतम 55% अंक आवश्यक हैं।"],
+        "ml": ["എംസിഎ പ്രോഗ്രാമിനുള്ള യോഗ്യത: കമ്പ്യൂട്ടർ ആപ്ലിക്കേഷൻസ്/സയൻസ്/ഐടിയിൽ ബിരുദം അല്ലെങ്കിൽ ഗണിതം/സ്ഥിതിവിവരം എന്നിവയോടെ കൊമേഴ്സ്/ഇക്കണോമിക്സ്/ബിസിനസ് അഡ്മിനിസ്ട്രേഷനിൽ ബിരുദം അല്ലെങ്കിൽ സയൻസിൽ ബിരുദം, എല്ലാത്തിനും കുറഞ്ഞത് 55% മാർക്ക് ആവശ്യമാണ്."]
+      }
+    },
+    {
+      "tag": "course_ma_economics_fees",
+      "patterns": {
+        "en": ["ma economics fees", "fees for ma economics", "economics masters fee"],
+        "hi": ["एमए इकोनॉमिक्स की फीस", "अर्थशास्त्र में एमए की फीस"],
+        "ml": ["എംഎ ഇക്കണോമിക്സ് ഫീസ്", "എംഎ ഇക്കണോമിക്സ് ഫീസ് എത്രയാണ്"]
+      },
+      "responses": {
+        "en": ["The total fee for the first semester of the M.A. Economics program is ₹20,542."],
+        "hi": ["एम.ए. अर्थशास्त्र कार्यक्रम के पहले सेमेस्टर के लिए कुल शुल्क ₹20,542 है।"],
+        "ml": ["എം.എ. ഇക്കണോമിക്സ് പ്രോഗ്രാമിന്റെ ഒന്നാം സെമസ്റ്ററിലെ ആകെ ഫീസ് ₹20,542 ആണ്."]
+      }
+    },
+    {
+      "tag": "course_ma_economics_eligibility",
+      "patterns": {
+        "en": ["ma economics eligibility", "eligibility for ma economics", "requirements for economics masters"],
+        "hi": ["एमए इकोनॉमिक्स के लिए पात्रता", "अर्थशास्त्र में एमए पात्रता"],
+        "ml": ["എംഎ ഇക്കണോമിക്സ് യോഗ്യത", "എംഎ ഇക്കണോമിക്സ് പ്രവേശന യോഗ്യത"]
+      },
+      "responses": {
+        "en": ["For M.A. Economics, eligibility requires a Bachelor's degree in Economics, Social Sciences (with Economics), Commerce, Engineering, or Mathematics/Statistics with at least 50% marks."],
+        "hi": ["एम.ए. अर्थशास्त्र के लिए, पात्रता के लिए अर्थशास्त्र, सामाजिक विज्ञान (अर्थशास्त्र के साथ), वाणिज्य, इंजीनियरिंग, या गणित/सांख्यिकी में स्नातक की डिग्री में कम से-कम 50% अंक आवश्यक हैं।"],
+        "ml": ["എം.എ. ഇക്കണോമിക്സിന്, ഇക്കണോമിക്സ്, സോഷ്യൽ സയൻസസ് (ഇക്കണോമിക്സ് ഒരു വിഷയമായി), കൊമേഴ്സ്, എഞ്ചിനീയറിംഗ്, അല്ലെങ്കിൽ മാത്തമാറ്റിക്സ്/സ്റ്റാറ്റിസ്റ്റിക്സ് എന്നിവയിൽ കുറഞ്ഞത് 50% മാർക്കോടെ ബിരുദം ആവശ്യമാണ്."]
       }
     }
   ]
