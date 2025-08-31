@@ -88,8 +88,8 @@ function App() {
   const suggestions = [
     { text: 'Admissions', icon: <FaUniversity /> },
     { text: 'Fee Structure', icon: <FaBookOpen /> },
-    { text: 'Student Services', icon: <FaUsers /> },
-    { text: 'Faculty Directory', icon: <FaChalkboardTeacher /> },
+    { text: 'about the campus', icon: <FaUsers /> },
+    { text: 'university motto', icon: <FaChalkboardTeacher /> },
   ];
 
   return (
