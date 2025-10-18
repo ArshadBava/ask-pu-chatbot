@@ -1,107 +1,103 @@
 import json
-import json
 import random
 import os
 import torch
-import pickle
-from transformers import BertTokenizer, BertForSequenceClassification
 from thefuzz import fuzz
+from transformers import BertTokenizer, BertForSequenceClassification
 
-# --- 1. Load All Necessary Components ---
-
-# Define paths
+# --- CONFIGURATION ---
 MODEL_PATH = './askpu-model'
-INTENTS_FILE_PATH = os.path.join(os.path.dirname(__file__), 'intents.json')
+CONFIDENCE_THRESHOLD = 0.60  # We lowered this before, let's keep it here for now
 
-# Load the trained model and tokenizer
-print("Loading fine-tuned model and tokenizer...")
-model = BertForSequenceClassification.from_pretrained(MODEL_PATH)
-tokenizer = BertTokenizer.from_pretrained(MODEL_PATH)
-print("Model and tokenizer loaded successfully.")
+# --- Load ML Model and Tokenizer ---
+try:
+    tokenizer = BertTokenizer.from_pretrained(MODEL_PATH)
+    model = BertForSequenceClassification.from_pretrained(MODEL_PATH)
+    model.eval() # Set the model to evaluation mode
+    print("✅ ML Model loaded successfully.")
+except Exception as e:
+    print(f"❌ Error loading ML model: {e}")
+    model = None
+    tokenizer = None
 
-# Load the label encoder
-print("Loading label encoder...")
-with open(os.path.join(MODEL_PATH, 'label_encoder.pkl'), 'rb') as f:
-    label_encoder = pickle.load(f)
-print("Label encoder loaded successfully.")
-
-# Load the intents data for responses
-with open(INTENTS_FILE_PATH, 'r', encoding='utf-8') as file:
+# --- Load Intents Data ---
+intents_file_path = os.path.join(os.path.dirname(__file__), 'intents.json')
+with open(intents_file_path, 'r', encoding='utf-8') as file:
     intents_data = json.load(file)
 
-# Use GPU if available
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model.to(device)
-model.eval() # Set the model to evaluation mode
+# --- Create a mapping from label index to tag name ---
+label_to_tag = {i: intent['tag'] for i, intent in enumerate(intents_data['intents'])}
 
-# --- 2. The Main Prediction and Response Function ---
+# --- Default Fallback Responses ---
+DEFAULT_RESPONSES = {
+    'en': "I'm sorry, I'm not sure how to respond to that. Could you please try rephrasing?",
+    'hi': "मुझे क्षमा करें, मैं यह समझ नहीं पा रहा हूँ। क्या आप अपना प्रश्न फिर से पूछ सकते हैं?",
+    'ml': "ക്ഷമിക്കണം, എനിക്കത് മനസ്സിലായില്ല. നിങ്ങളുടെ ചോദ്യം ഒന്നു മാറ്റി ചോദിക്കാമോ?"
+}
 
-def get_bot_response(user_message):
-    """
-    Analyzes the user's message using a hybrid approach:
-    1. Try the ML model for a high-confidence prediction.
-    2. If confidence is low, fall back to robust fuzzy string matching.
-    """
-    # --- Step A: Predict the Intent using the ML Model ---
-    CONFIDENCE_THRESHOLD = 0.75 # Keep this high for the primary model
-
-    inputs = tokenizer(user_message, return_tensors="pt", padding=True, truncation=True, max_length=128)
-    inputs = {k: v.to(device) for k, v in inputs.items()}
-
+def predict_intent(text):
+    if not model or not tokenizer:
+        return "error", 0.0
+    inputs = tokenizer(text, return_tensors='pt', truncation=True, padding=True, max_length=512)
     with torch.no_grad():
         outputs = model(**inputs)
-        logits = outputs.logits
+    logits = outputs.logits
+    probabilities = torch.softmax(logits, dim=1)
+    confidence, predicted_class = torch.max(probabilities, dim=1)
+    return label_to_tag[predicted_class.item()], confidence.item()
 
-    probabilities = torch.nn.functional.softmax(logits, dim=-1)[0]
-    predicted_index = torch.argmax(probabilities).item()
-    predicted_confidence = probabilities[predicted_index].item()
-    predicted_tag = label_encoder.inverse_transform([predicted_index])[0]
-
-    # --- Debugging print statement ---
-    print(f"--- AI DEBUG ---")
-    print(f"User Message: '{user_message}'")
-    print(f"ML Model Predicted Intent: '{predicted_tag}' with {predicted_confidence:.2f} confidence")
-
-    # If ML model is highly confident, use its prediction
-    if predicted_confidence >= CONFIDENCE_THRESHOLD:
-        print("--> Using ML Model Prediction")
-        print(f"--------------------")
-        for intent in intents_data['intents']:
-            if intent['tag'] == predicted_tag:
-                # Determine language and respond
-                best_lang_score = 0
-                detected_language = 'en'
-                for lang, patterns in intent['patterns'].items():
-                    for pattern in patterns:
-                        score = fuzz.ratio(user_message.lower(), pattern.lower())
-                        if score > best_lang_score:
-                            best_lang_score = score
-                            detected_language = lang
-                return random.choice(intent['responses'][detected_language])
-
-    # --- Step B: Fallback to Fuzzy String Matching if ML confidence is low ---
-    print("--> ML confidence too low. Falling back to Fuzzy Matching.")
-    FUZZY_MATCH_THRESHOLD = 70 # Threshold for fuzzy matching
-    best_fuzzy_score = 0
-    best_fuzzy_tag = None
-    detected_fuzzy_language = 'en'
+def get_fuzzy_response(user_message):
+    """
+    Finds the best response using fuzzy matching.
+    NOW CORRECTLY RETURNS A TUPLE (response, tag).
+    """
+    best_match_score = 0
+    best_match_tag = None
+    detected_language = 'en'
+    MATCH_THRESHOLD = 70
 
     for intent in intents_data['intents']:
         for lang, patterns in intent['patterns'].items():
             for pattern in patterns:
                 score = fuzz.token_set_ratio(user_message.lower(), pattern.lower())
-                if score > best_fuzzy_score:
-                    best_fuzzy_score = score
-                    best_fuzzy_tag = intent['tag']
-                    detected_fuzzy_language = lang
-
-    print(f"Fuzzy Match Best Intent: '{best_fuzzy_tag}' with {best_fuzzy_score} score")
-    print(f"--------------------")
+                if score > best_match_score:
+                    best_match_score = score
+                    best_match_tag = intent['tag']
+                    detected_language = lang
     
-    if best_fuzzy_score >= FUZZY_MATCH_THRESHOLD:
+    if best_match_score >= MATCH_THRESHOLD:
         for intent in intents_data['intents']:
-            if intent['tag'] == best_fuzzy_tag:
-                return random.choice(intent['responses'][detected_fuzzy_language])
+            if intent['tag'] == best_match_tag:
+                response = random.choice(intent['responses'][detected_language])
+                return response, best_match_tag # Return tuple
 
-    # If both methods fail, return a default response
-    return "I'm sorry, I'm not sure how to respond to that. Could you please try rephrasing?"
+    # If no good fuzzy match is found
+    return DEFAULT_RESPONSES['en'], "unknown_fallback" # Return tuple
+
+def get_bot_response(user_message):
+    """
+    Main function to get a response. First tries the ML model, then falls back to fuzzy matching.
+    NOW ALWAYS RETURNS A TUPLE.
+    """
+    predicted_tag, confidence = predict_intent(user_message)
+
+    print("\n--- AI DEBUG ---")
+    print(f"User Message: '{user_message}'")
+    print(f"ML Model Predicted Intent: '{predicted_tag}' with {confidence:.2f} confidence")
+
+    if confidence >= CONFIDENCE_THRESHOLD:
+        print("--> ML model confidence is high. Using ML response.")
+        for intent in intents_data['intents']:
+            if intent['tag'] == predicted_tag:
+                # For simplicity, we'll just choose the English response for now.
+                # This could be enhanced to detect language as a separate step.
+                response = random.choice(intent['responses']['en'])
+                print("--------------------")
+                return response, predicted_tag # Return tuple
+    
+    print("--> ML confidence too low. Falling back to Fuzzy Matching.")
+    response, tag = get_fuzzy_response(user_message)
+    print(f"Fuzzy Match Best Intent: '{tag}' with score") # Corrected debug print
+    print("--------------------")
+    return response, tag # Return tuple
+
