@@ -1,12 +1,29 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+*.so
 
-# Virtual Environment
+# Virtual environment
 venv/
+.env
+*.env
 
-# Old Database
+# Django
 db.sqlite3
+staticfiles/
+media/
 
-# IDE / Editor specific
+# Logs and caches
+*.log
+*.pot
+*.pyc
+*.pkl
+.DS_Store
+
+# IDE files
 .vscode/
+.idea/
+*.swp
+*.swo

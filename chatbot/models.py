@@ -2,10 +2,13 @@ from django.db import models
 import uuid
 
 class Conversation(models.Model):
+    """
+    A simple model to log all chat interactions.
+    """
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user_message = models.TextField()
     bot_response = models.TextField()
-    language = models.CharField(max_length=10)
+    language = models.CharField(max_length=10, blank=True, null=True) # Language can be optional
     timestamp = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
