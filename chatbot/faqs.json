@@ -1,0 +1,1346 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": {
+        "en": ["hi", "hello", "hey", "good morning"],
+        "hi": ["नमस्ते", "नमस्ते जी"],
+        "ml": ["ഹായ്", "നമസ്കാരം"]
+      },
+      "responses": {
+        "en": ["Hello! Welcome to the Ask PU chatbot. How can I assist you today?", "Hi there! How can I help you?"],
+        "hi": ["नमस्ते! Ask PU चैटबॉट में आपका स्वागत है। मैं आपकी कैसे मदद कर सकता हूँ?"],
+        "ml": ["നമസ്കാരം! Ask PU ചാറ്റ്ബോട്ടിലേക്ക് സ്വാഗതം. ഞാൻ നിങ്ങളെ എങ്ങനെ സഹായിക്കണം?"]
+      }
+    },
+    {
+      "tag": "goodbye",
+      "patterns": {
+        "en": ["bye", "goodbye", "see you later"],
+        "hi": ["अलविदा", "फिर मिलेंगे"],
+        "ml": ["ബൈ", "പോയിട്ട് വരാം"]
+      },
+      "responses": {
+        "en": ["Goodbye! Have a great day.", "See you later!"],
+        "hi": ["अलविदा! आपका दिन शुभ हो।"],
+        "ml": ["വിട! ഒരു നല്ല ദിനം ആശംസിക്കുന്നു."]
+      }
+    },
+    {
+      "tag": "thanks",
+      "patterns": {
+        "en": ["thanks", "thank you", "helpful"],
+        "hi": ["dhanyavaad", "धन्यवाद", "शुक्रिया"],
+        "ml": ["നന്ദി", "വളരെ ഉപകാരം"]
+      },
+      "responses": {
+        "en": ["You're welcome!", "Happy to help!"],
+        "hi": ["आपका स्वागत है!", "मदद करके खुशी हुई!"],
+        "ml": ["സഹായിക്കാൻ കഴിഞ്ഞതിൽ സന്തോഷമുണ്ട്.", "welcome!"]
+      }
+    },
+    {
+      "tag": "chitchat",
+      "patterns": {
+        "en": ["can i ask a question", "are you a bot", "what can you do", "how are you"],
+        "hi": ["क्या मैं एक सवाल पूछ सकता हूँ", "आप क्या कर सकते हैं"],
+        "ml": ["എനിക്ക് ഒരു ചോദ്യം ചോദിക്കാൻ കഴിയുമോ", "നിങ്ങൾക്ക് എന്തുചെയ്യാൻ കഴിയും"]
+      },
+      "responses": {
+        "en": ["Of course! I am here to answer your questions about Pondicherry University.", "I am the Ask PU chatbot, ready to help you with information on courses, fees, and admissions.", "You can ask me anything about PG admissions at Pondicherry University!"],
+        "hi": ["बेशक! मैं पांडिचेरी विश्वविद्यालय के बारे में आपके सवालों का जवाब देने के लिए यहां हूं।"],
+        "ml": ["തീർച്ചയായും! പോണ്ടിച്ചേരി സർവകലാശാലയെക്കുറിച്ചുള്ള നിങ്ങളുടെ ചോദ്യങ്ങൾക്ക് ഉത്തരം നൽകാൻ ഞാൻ ഇവിടെയുണ്ട്."]
+      }
+    },
+    {
+      "tag": "history_accreditation",
+      "patterns": {
+        "en": ["tell me about the university", "history of the university", "accreditation status"],
+        "hi": ["विश्वविद्यालय के बारे में बताएं", "विश्वविद्यालय का इतिहास"],
+        "ml": ["സർവകലാശാലയെക്കുറിച്ച് പറയൂ", "സർവകലാശാലയുടെ ചരിത്രം"]
+      },
+      "responses": {
+        "en": ["Pondicherry University was established by an Act of Parliament in 1985. It is a Central University and is accredited with an 'A' Grade by NAAC."],
+        "hi": ["पांडिचेरी विश्वविद्यालय की स्थापना 1985 में संसद के एक अधिनियम द्वारा की गई थी। यह एक केंद्रीय विश्वविद्यालय है और इसे NAAC द्वारा 'A' ग्रेड से मान्यता प्राप्त है।"],
+        "ml": ["പോണ്ടിച്ചേരി സർവകലാശാല 1985-ൽ പാർലമെന്റിന്റെ ഒരു നിയമപ്രകാരം സ്ഥാപിക്കപ്പെട്ട ഒരു കേന്ദ്ര സർവ്വകലാശാലയാണ്. NAAC-ൽ നിന്ന് 'A' ഗ്രേഡ് അക്രഡിറ്റേഷൻ ലഭിച്ചിട്ടുണ്ട്."]
+      }
+    },
+    {
+      "tag": "campus_info_general",
+      "patterns": {
+        "en": ["about the campus", "how is the campus", "campus facilities"],
+        "hi": ["कैंपस के बारे में", "कैंपस कैसा है"],
+        "ml": ["ക്യാമ്പസിനെക്കുറിച്ച്", "ക്യാമ്പസ് എങ്ങനെയുണ്ട്"]
+      },
+      "responses": {
+        "en": ["Pondicherry University has a beautiful green campus with state-of-the-art infrastructure, well-equipped laboratories, and Wi-Fi connectivity. It provides an excellent e-learning environment."],
+        "hi": ["पांडिचेरी विश्वविद्यालय में एक सुंदर हरा-भरा परिसर है जिसमें अत्याधुनिक बुनियादी ढाँचे, सुसज्जित प्रयोगशालाएँ और वाई-फाई कनेक्टिविटी है।"],
+        "ml": ["പോണ്ടിച്ചേരി സർവകലാശാലയ്ക്ക് അത്യാധുനിക അടിസ്ഥാന സൗകര്യങ്ങളും സജ്ജീകരണങ്ങളോടുകൂടിയ മനോഹരമായ ഒരു പച്ചപ്പ് നിറഞ്ഞ ക്യാമ്പസ് ഉണ്ട്. ഇവിടെ വൈ-ഫൈ കണക്റ്റിവിറ്റിയും ലഭ്യമാണ്."]
+      }
+    },
+    {
+      "tag": "library_info",
+      "patterns": {
+        "en": ["library details", "tell me about the library", "Ananda Rangapillai Library"],
+        "hi": ["पुस्तकालय का विवरण", "पुस्तकालय के बारे में बताएं"],
+        "ml": ["ലൈബ്രറി വിവരങ്ങൾ", "ലൈബ്രറിയെക്കുറിച്ച് പറയൂ"]
+      },
+      "responses": {
+        "en": ["The University has a central library named the Ananda Rangapillai Library. It's a state-of-the-art facility located in the center of the campus, opposite the administration building."],
+        "hi": ["विश्वविद्यालय में आनंद रंगपिल्लई पुस्तकालय नामक एक केंद्रीय पुस्तकालय है। यह परिसर के केंद्र में, प्रशासन भवन के सामने स्थित है।"],
+        "ml": ["സർവകലാശാലയ്ക്ക് ആനന്ദ രംഗപിള്ള ലൈബ്രറി എന്ന പേരിൽ ഒരു കേന്ദ്ര ലൈബ്രറിയുണ്ട്. ഇത് ക്യാമ്പസിന്റെ മധ്യഭാഗത്ത്, അഡ്മിനിസ്ട്രേഷൻ കെട്ടിടത്തിന് എതിർവശത്തായി സ്ഥിതിചെയ്യുന്നു."]
+      }
+    },
+    {
+      "tag": "health_center_info",
+      "patterns": {
+        "en": ["health center", "medical facilities", "what if i get sick"],
+        "hi": ["स्वास्थ्य केंद्र", "चिकित्सा सुविधाएं"],
+        "ml": ["ആരോഗ്യ കേന്ദ്രം", "മെഡിക്കൽ സൗകര്യങ്ങൾ"]
+      },
+      "responses": {
+        "en": ["The University Health Centre offers medical facilities round-the-clock to all students, especially those residing in the hostels."],
+        "hi": ["विश्वविद्यालय स्वास्थ्य केंद्र सभी छात्रों, विशेषकर छात्रावासों में रहने वाले छात्रों को चौबीसों घंटे चिकित्सा सुविधाएं प्रदान करता है।"],
+        "ml": ["യൂണിവേഴ്സിറ്റി ഹെൽത്ത് സെന്റർ എല്ലാ വിദ്യാർത്ഥികൾക്കും, പ്രത്യേകിച്ച് ഹോസ്റ്റലുകളിൽ താമസിക്കുന്നവർക്ക് മുഴുവൻ സമയ മെഡിക്കൽ സൗകര്യങ്ങൾ നൽകുന്നു."]
+      }
+    },
+    {
+      "tag": "internship_parliament",
+      "patterns": {
+        "en": ["internship at parliament", "chancellor's internship", "special programs"],
+        "hi": ["संसद में इंटर्नशिप", "चांसलर की इंटर्नशिप"],
+        "ml": ["പാർലമെന്റിൽ ഇന്റേൺഷിപ്പ്", "ചാൻസലറുടെ ഇന്റേൺഷിപ്പ്"]
+      },
+      "responses": {
+        "en": ["A unique opportunity is the 'Intern at Parliament' program, offered by the Hon'ble Vice-President of India & Chancellor of the University to 10 students every year."],
+        "hi": ["एक अनूठा अवसर 'संसद में इंटर्न' कार्यक्रम है, जो भारत के माननीय उपराष्ट्रपति और विश्वविद्यालय के कुलाधिपति द्वारा हर साल 10 छात्रों को प्रदान किया जाता है।"],
+        "ml": ["ബഹുമാനപ്പെട്ട ഇന്ത്യൻ ഉപരാഷ്ട്രപതിയും സർവകലാശാലയുടെ ചാൻസലറുമായ വ്യക്തി എല്ലാ വർഷവും 10 വിദ്യാർത്ഥികൾക്ക് നൽകുന്ന 'പാർലമെന്റിൽ ഇന്റേൺ' എന്ന പരിപാടി ഒരു സവിശേഷ അവസരമാണ്."]
+      }
+    },
+    {
+      "tag": "admission_procedure_general",
+      "patterns": {
+        "en": ["admission procedure", "how to apply", "application process"],
+        "hi": ["प्रवेश प्रक्रिया", "आवेदन कैसे करें"],
+        "ml": ["പ്രവേശന നടപടിക്രമം", "എങ്ങനെ അപേക്ഷിക്കാം"]
+      },
+      "responses": {
+        "en": ["Admissions to all PG courses are based on the CUET(PG) entrance examination. You can find detailed information and the application portal on the official Pondicherry University website under the 'Admissions' section."],
+        "hi": ["सभी पीजी पाठ्यक्रमों में प्रवेश सीयूईटी (पीजी) प्रवेश परीक्षा पर आधारित हैं। आप विस्तृत जानकारी और आवेदन पोर्टल पांडिचेरी विश्वविद्यालय की आधिकारिक वेबसाइट पर 'प्रवेश' अनुभाग के तहत पा सकते हैं।"],
+        "ml": ["എല്ലാ പിജി കോഴ്‌സുകളിലേക്കുമുള്ള പ്രവേശനം CUET(PG) പ്രവേശന പരീക്ഷയെ അടിസ്ഥാനമാക്കിയുള്ളതാണ്. വിശദമായ വിവരങ്ങൾക്കും അപേക്ഷാ പോർട്ടലിനും പോണ്ടിച്ചേരി സർവകലാശാലയുടെ ഔദ്യോഗിക വെബ്സൈറ്റിലെ 'അഡ്മിഷൻസ്' വിഭാഗം സന്ദർശിക്കുക."]
+      }
+    },
+    {
+      "tag": "hostel_information",
+      "patterns": {
+        "en": ["hostel information", "hostel rules", "hostel mess"],
+        "hi": ["छात्रावास की जानकारी", "छात्रावास के नियम"],
+        "ml": ["ഹോസ്റ്റൽ വിവരങ്ങൾ", "ഹോസ്റ്റൽ നിയമങ്ങൾ"]
+      },
+      "responses": {
+        "en": ["The university has 21 hostels on campus. Dining in the hostel mess is compulsory for residents. Ragging is strictly prohibited. For more detailed rules, please check the university website."],
+        "hi": ["विश्वविद्यालय परिसर में 21 छात्रावास हैं। निवासियों के लिए छात्रावास मेस में भोजन करना अनिवार्य है। रैगिंग सख्त वर्जित है।"],
+        "ml": ["സർവകലാശാലാ കാമ്പസിൽ 21 ഹോസ്റ്റലുകളുണ്ട്. താമസക്കാർക്ക് ഹോസ്റ്റൽ മെസ്സിലെ ഭക്ഷണം നിർബന്ധമാണ്. റാഗിംഗ് കർശനമായി നിരോധിച്ചിരിക്കുന്നു."]
+      }
+    },
+    {
+        "tag": "course_mca_eligibility",
+        "patterns": {
+            "en": ["mca eligibility", "eligibility for mca", "mca requirements"],
+            "hi": ["एमसीए पात्रता", "एमसीए के लिए पात्रता"],
+            "ml": ["എംസിഎ യോഗ്യത"]
+        },
+        "responses": {
+            "en": ["Eligibility for MCA is a Bachelor's degree in Computer Applications/Science/IT OR Commerce/Economics/BBA with Math/Statistics OR a Science degree with Math/Statistics, with a minimum of 55% marks."],
+            "hi": ["एमसीए के लिए पात्रता कंप्यूटर एप्लीकेशन/विज्ञान/आईटी में स्नातक की डिग्री या गणित/सांख्यिकी के साथ वाणिज्य/अर्थशास्त्र/बीबीए या गणित/सांख्यिकी के साथ विज्ञान की डिग्री है, जिसमें न्यूनतम 55% अंक हों।"],
+            "ml": ["എംസിഎയ്ക്കുള്ള യോഗ്യത: കമ്പ്യൂട്ടർ ആപ്ലിക്കേഷൻസ്/സയൻസ്/ഐടിയിൽ ബിരുദം അല്ലെങ്കിൽ ഗണിതം/സ്ഥിതിവിവരക്കണക്ക് എന്നിവയോടുകൂടിയ കൊമേഴ്സ്/ഇക്കണോമിക്സ്/ബിബിഎ അല്ലെങ്കിൽ ഗണിതം/സ്ഥിതിവിവരക്കണക്ക് എന്നിവയോടുകൂടിയ സയൻസ് ബിരുദം, കുറഞ്ഞത് 55% മാർക്കോടെ."]
+        }
+    },
+    {
+        "tag": "course_mca_fees",
+        "patterns": {
+            "en": ["mca fee", "fees for mca", "mca fee structure"],
+            "hi": ["एमसीए की फीस", "एमसीए शुल्क संरचना"],
+            "ml": ["എംസിഎ ഫീസ്", "എംസിഎ ഫീസ് ഘടന"]
+        },
+        "responses": {
+            "en": ["The total fee for the first semester of the MCA program is ₹34,342."],
+            "hi": ["एमसीए कार्यक्रम के पहले सेमेस्टर के लिए कुल शुल्क ₹34,342 है।"],
+            "ml": ["എംസിഎ പ്രോഗ്രാമിന്റെ ഒന്നാം സെമസ്റ്ററിലെ ആകെ ഫീസ് ₹34,342 ആണ്."]
+        }
+    },
+    {
+        "tag": "course_ma_economics_eligibility",
+        "patterns": {
+            "en": ["ma economics eligibility", "eligibility for ma economics"],
+            "hi": ["एमए अर्थशास्त्र पात्रता"],
+            "ml": ["എംഎ ഇക്കണോമിക്സ് യോഗ്യത"]
+        },
+        "responses": {
+            "en": ["Eligibility for M.A. Economics is a Bachelor's degree in Economics, Social Sciences (with Economics), Commerce, Engineering, or Mathematics/Statistics with at least 50% marks."],
+            "hi": ["एम.ए. अर्थशास्त्र के लिए पात्रता अर्थशास्त्र, सामाजिक विज्ञान (अर्थशास्त्र के साथ), वाणिज्य, इंजीनियरिंग, या गणित/सांख्यिकी में कम से कम 50% अंकों के साथ स्नातक की डिग्री है।"],
+            "ml": ["എം.എ. ഇക്കണോമിക്സിനുള്ള യോഗ്യത: ഇക്കണോമിക്സ്, സോഷ്യൽ സയൻസസ് (ഇക്കണോമിക്സ് ഒരു വിഷയമായി), കൊമേഴ്സ്, എഞ്ചിനീയറിംഗ്, അല്ലെങ്കിൽ മാത്തമാറ്റിക്സ്/സ്റ്റാറ്റിസ്റ്റിക്സ് എന്നിവയിൽ കുറഞ്ഞത് 50% മാർക്കോടെ ബിരുദം."]
+        }
+    },
+    {
+        "tag": "course_ma_economics_fees",
+        "patterns": {
+            "en": ["ma economics fee", "fees for ma economics"],
+            "hi": ["एमए अर्थशास्त्र की फीस"],
+            "ml": ["എംഎ ഇക്കണോമിക്സ് ഫീസ്"]
+        },
+        "responses": {
+            "en": ["The total fee for the first semester of M.A. Economics is ₹20,542."],
+            "hi": ["एम.ए. अर्थशास्त्र के पहले सेमेस्टर के लिए कुल शुल्क ₹20,542 है।"],
+            "ml": ["എം.എ. ഇക്കണോമിക്സിന്റെ ഒന്നാം സെമസ്റ്ററിലെ ആകെ ഫീസ് ₹20,542 ആണ്."]
+        }
+    },
+    {
+        "tag": "course_msc_cs_eligibility",
+        "patterns": {
+            "en": ["msc computer science eligibility", "eligibility for msc cs"],
+            "hi": ["एमएससी कंप्यूटर विज्ञान पात्रता"],
+            "ml": ["എംഎസ്‌സി കമ്പ്യൂട്ടർ സയൻസ് യോഗ്യത"]
+        },
+        "responses": {
+            "en": ["Eligibility for M.Sc. Computer Science (at Karaikal) is a Bachelor's degree in Computer Science/Applications/IT or equivalent with a minimum of 55% marks."],
+            "hi": ["एम.एससी. कंप्यूटर विज्ञान (कराइकल में) के लिए पात्रता कंप्यूटर विज्ञान/एप्लीकेशन/आईटी या समकक्ष में न्यूनतम 55% अंकों के साथ स्नातक की डिग्री है।"],
+            "ml": ["എം.എസ്സി. കമ്പ്യൂട്ടർ സയൻസിനുള്ള (കാരയ്ക്കൽ) യോഗ്യത: കമ്പ്യൂട്ടർ സയൻസ്/ആപ്ലിക്കേഷൻസ്/ഐടിയിലോ തത്തുല്യമായതിലോ കുറഞ്ഞത് 55% മാർക്കോടെ ബിരുദം."]
+        }
+    },
+    {
+        "tag": "course_msc_cs_fees",
+        "patterns": {
+            "en": ["msc computer science fee", "msc cs fee structure"],
+            "hi": ["एमएससी कंप्यूटर विज्ञान की फीस"],
+            "ml": ["എംഎസ്‌സി കമ്പ്യൂട്ടർ സയൻസ് ഫീസ്"]
+        },
+        "responses": {
+            "en": ["The total fee for the first semester of M.Sc. Computer Science programs is ₹34,342."],
+            "hi": ["एम.एससी. कंप्यूटर विज्ञान कार्यक्रमों के पहले सेमेस्टर के लिए कुल शुल्क ₹34,342 है।"],
+            "ml": ["എം.എസ്സി. കമ്പ്യൂട്ടർ സയൻസ് പ്രോഗ്രാമുകളുടെ ഒന്നാം സെമസ്റ്ററിലെ ആകെ ഫീസ് ₹34,342 ആണ്."]
+        }
+    },
+    {
+        "tag": "course_mba_eligibility",
+        "patterns": {
+            "en": ["mba eligibility", "eligibility for mba", "mba requirements"],
+            "hi": ["एमबीए पात्रता", "एमबीए के लिए पात्रता"],
+            "ml": ["എംബിഎ യോഗ്യത"]
+        },
+        "responses": {
+            "en": ["Eligibility for the M.B.A. (Business Administration) is a Bachelor's degree in any discipline with a minimum of 50% of marks."],
+            "hi": ["एम.बी.ए. (बिजनेस एडमिनिस्ट्रेशन) के लिए पात्रता किसी भी विषय में न्यूनतम 50% अंकों के साथ स्नातक की डिग्री है।"],
+            "ml": ["എം.ബി.എ. (ബിസിനസ് അഡ്മിനിസ്ട്രേഷൻ) യോഗ്യത: ഏതെങ്കിലും വിഷയത്തിൽ കുറഞ്ഞത് 50% മാർക്കോടെ ബിരുദം."]
+        }
+    },
+    {
+        "tag": "course_mba_fees",
+        "patterns": {
+            "en": ["mba fee", "fees for mba", "mba fee structure"],
+            "hi": ["एमबीए की फीस", "एमबीए शुल्क संरचना"],
+            "ml": ["എംബിഎ ഫീസ്", "എംബിഎ ഫീസ് ഘടന"]
+        },
+        "responses": {
+            "en": ["The total fee for the first semester of the M.B.A. program is ₹66,742."],
+            "hi": ["एम.बी.ए. कार्यक्रम के पहले सेमेस्टर के लिए कुल शुल्क ₹66,742 है।"],
+            "ml": ["എം.ബി.എ. പ്രോഗ്രാമിന്റെ ഒന്നാം സെമസ്റ്ററിലെ ആകെ ഫീസ് ₹66,742 ആണ്."]
+        }
+    },
+    {
+        "tag": "course_ma_anthropology_eligibility",
+        "patterns": {
+            "en": ["ma anthropology eligibility"],
+            "hi": ["एमए नृविज्ञान पात्रता"],
+            "ml": ["എംഎ ആന്ത്രോപോളജി യോഗ്യത"]
+        },
+        "responses": {
+            "en": ["Eligibility for M.A. Anthropology is a Bachelor's degree in any discipline with a minimum of 50% of marks."],
+            "hi": ["एम.ए. नृविज्ञान के लिए पात्रता किसी भी विषय में न्यूनतम 50% अंकों के साथ स्नातक की डिग्री है।"],
+            "ml": ["എം.എ. ആന്ത്രോപോളജിക്കുള്ള യോഗ്യത: ഏതെങ്കിലും വിഷയത്തിൽ കുറഞ്ഞത് 50% മാർക്കോടെ ബിരുദം."]
+        }
+    },
+    {
+        "tag": "course_ma_anthropology_fees",
+        "patterns": {
+            "en": ["ma anthropology fees"],
+            "hi": ["एमए नृविज्ञान की फीस"],
+            "ml": ["എംഎ ആന്ത്രോപോളജി ഫീസ്"]
+        },
+        "responses": {
+            "en": ["The total fee for the first semester of M.A. Anthropology is ₹19,042."],
+            "hi": ["एम.ए. नृविज्ञान के पहले सेमेस्टर के लिए कुल शुल्क ₹19,042 ਹੈ।"],
+            "ml": ["എം.എ. ആന്ത്രോപോളജിയുടെ ഒന്നാം സെമസ്റ്ററിലെ ആകെ ഫീസ് ₹19,042 ആണ്."]
+        }
+    },
+        {
+      "tag": "location_info",
+      "patterns": {
+        "en": ["where is the university located", "location of campus", "main campus address"],
+        "hi": ["विश्वविद्यालय कहाँ स्थित है", "कैंपस का स्थान"],
+        "ml": ["സർവകലാശാല എവിടെയാണ്", "ക്യാമ്പസിൻ്റെ സ്ഥാനം"]
+      },
+      "responses": {
+        "en": ["The main campus of Pondicherry University is located in Kalapet, Puducherry, beautifully situated by the Bay of Bengal. There are also campuses in Karaikal and Port Blair."],
+        "hi": ["पांडिचेरी विश्वविद्यालय का मुख्य परिसर कलापेट, पुडुचेरी में स्थित है, जो बंगाल की खाड़ी के किनारे खूबसूरती से बसा है। इसके अलावा कराइकल और पोर्ट ब्लेयर में भी परिसर हैं।"],
+        "ml": ["പോണ്ടിച്ചേരി സർവകലാശാലയുടെ പ്രധാന ക്യാമ്പസ് കാലാപ്പേട്ടിലാണ്, ബംഗാൾ ഉൾക്കടലിൻ്റെ തീരത്താണ് ഇത് സ്ഥിതിചെയ്യുന്നത്. കാരയ്ക്കൽ, പോർട്ട് ബ്ലെയർ എന്നിവിടങ്ങളിലും ക്യാമ്പസുകളുണ്ട്."]
+      }
+    },
+    {
+      "tag": "reservation_policy",
+      "patterns": {
+        "en": ["reservation policy", "sc st quota", "obc reservation", "ews quota"],
+        "hi": ["आरक्षण नीति", "एससी एसटी कोटा", "ओबीसी आरक्षण"],
+        "ml": ["സംവരണ നയം", "എസ്‌സി എസ്ടി ക്വാട്ട", "ഒബിസി സംവരണം"]
+      },
+      "responses": {
+        "en": ["As a Central University, we follow the Government of India's reservation policy: 15% for SC, 7.5% for ST, 27% for OBC (NCL), and 10% for EWS candidates."],
+        "hi": ["एक केंद्रीय विश्वविद्यालय के रूप में, हम भारत सरकार की आरक्षण नीति का पालन करते हैं: एससी के लिए 15%, एसटी के लिए 7.5%, ओबीसी (एनसीएल) के लिए 27%, और ईडब्ल्यूएस उम्मीदवारों के लिए 10%।"],
+        "ml": ["ഒരു കേന്ദ്ര സർവ്വകലാശാല എന്ന നിലയിൽ, ഞങ്ങൾ ഇന്ത്യൻ ഗവൺമെന്റിന്റെ സംവരണ നയം പിന്തുടരുന്നു: എസ്‌സിക്ക് 15%, എസ്ടിക്ക് 7.5%, ഒബിസിക്ക് 27%, ഇഡബ്ല്യുഎസ് വിഭാഗത്തിന് 10% എന്നിങ്ങനെയാണ് സംവരണം."]
+      }
+    },
+    {
+      "tag": "ragging_policy",
+      "patterns": {
+        "en": ["ragging policy", "is ragging allowed", "anti-ragging committee"],
+        "hi": ["रैगिंग नीति", "क्या रैगिंग की अनुमति है"],
+        "ml": ["റാഗിംഗ് നയം", "റാഗിംഗ് അനുവദനീയമാണോ"]
+      },
+      "responses": {
+        "en": ["Pondicherry University has a strict zero-tolerance policy towards ragging in any form. We have an active Anti-Ragging Committee to ensure a safe campus for all students."],
+        "hi": ["पांडिचेरी विश्वविद्यालय में किसी भी रूप में रैगिंग के प्रति सख्त शून्य-सहिष्णुता की नीति है। सभी छात्रों के लिए एक सुरक्षित परिसर सुनिश्चित करने के लिए हमारे पास एक सक्रिय एंटी-रैगिंग समिति है।"],
+        "ml": ["പോണ്ടിച്ചേരി സർവകലാശാലയിൽ റാഗിംഗിനോട് ഒരു വിട്ടുവീഴ്ചയുമില്ല. എല്ലാ വിദ്യാർത്ഥികൾക്കും സുരക്ഷിതമായ ഒരു കാമ്പസ് ഉറപ്പാക്കാൻ ഞങ്ങൾക്ക് ഒരു സജീവ ആന്റി-റാഗിംഗ് കമ്മിറ്റിയുണ്ട്."]
+      }
+    },
+    {
+      "tag": "cbcs_system",
+      "patterns": {
+        "en": ["cbcs system", "choice based credit system", "what is cbcs"],
+        "hi": ["सीबीसीएस प्रणाली", "च्वाइस बेस्ड क्रेडिट सिस्टम"],
+        "ml": ["സിബിസിഎസ് സിസ്റ്റം", "ചോയ്സ് ബേസ്ഡ് ക്രെഡിറ്റ് സിസ്റ്റം"]
+      },
+      "responses": {
+        "en": ["Pondicherry University was one of the first universities in India to implement the Choice-Based Credit System (CBCS). This allows students to choose interdisciplinary elective courses, providing a flexible and broad-based education."],
+        "hi": ["पांडिचेरी विश्वविद्यालय भारत में च्वाइस बेस्ड क्रेडिट सिस्टम (CBCS) लागू करने वाले पहले विश्वविद्यालयों में से एक था। यह छात्रों को अंतःविषय वैकल्पिक पाठ्यक्रम चुनने की अनुमति देता है।"],
+        "ml": ["ഇന്ത്യയിൽ ചോയ്സ് ബേസ്ഡ് ക്രെഡിറ്റ് സിസ്റ്റം (സിബിസിഎസ്) നടപ്പിലാക്കിയ ആദ്യത്തെ സർവകലാശാലകളിലൊന്നാണ് പോണ്ടിച്ചേരി സർവകലാശാല. ഇത് വിദ്യാർത്ഥികൾക്ക് മറ്റ് ഡിപ്പാർട്ട്മെന്റുകളിൽ നിന്ന് ഇലക്ടീവ് കോഴ്സുകൾ തിരഞ്ഞെടുക്കാൻ അവസരം നൽകുന്നു."]
+      }
+    },
+    {
+      "tag": "university_leadership",
+      "patterns": {
+        "en": ["who is the chancellor", "who is the visitor of the university", "university leadership"],
+        "hi": ["कुलाधिपति कौन हैं", "विश्वविद्यालय के आगंतुक कौन हैं"],
+        "ml": ["ചാൻസലർ ആരാണ്", "സർവകലാശാലയുടെ വിസിറ്റർ ആരാണ്"]
+      },
+      "responses": {
+        "en": ["As a Central University, the President of India is the Visitor, and the Vice-President of India is the Chancellor of Pondicherry University."],
+        "hi": ["एक केंद्रीय विश्वविद्यालय के रूप में, भारत के राष्ट्रपति आगंतुक हैं, और भारत के उपराष्ट्रपति पांडिचेरी विश्वविद्यालय के कुलाधिपति हैं।"],
+        "ml": ["ഒരു കേന്ദ്ര സർവ്വകലാശാല എന്ന നിലയിൽ, ഇന്ത്യൻ രാഷ്ട്രപതിയാണ് വിസിറ്റർ, ഇന്ത്യൻ ഉപരാഷ്ട്രപതിയാണ് പോണ്ടിച്ചേരി സർവകലാശാലയുടെ ചാൻസലർ."]
+      }
+    },
+    {
+      "tag": "university_motto",
+      "patterns": {
+        "en": ["what is the university motto", "motto of the university", "vers la lumiere"],
+        "hi": ["विश्वविद्यालय का आदर्श वाक्य क्या है", "विश्वविद्यालय का मोटो"],
+        "ml": ["സർവകലാശാലയുടെ മുദ്രാവാക്യം എന്താണ്", "യൂണിവേഴ്സിറ്റിയുടെ മോട്ടോ"]
+      },
+      "responses": {
+        "en": ["The motto of Pondicherry University is 'Vers la Lumière', which is French for 'Towards the Light'. It symbolizes the pursuit of knowledge and enlightenment."],
+        "hi": ["पांडिचेरी विश्वविद्यालय का आदर्श वाक्य 'वर्स ला लुमिएर' है, जो फ्रेंच में 'प्रकाश की ओर' है। यह ज्ञान और आत्मज्ञान की खोज का प्रतीक है।"],
+        "ml": ["പോണ്ടിച്ചേരി സർവകലാശാലയുടെ മുദ്രാവാക്യം 'വേർസ് ലാ ലൂമിയർ' എന്നാണ്, ഇത് 'വെളിച്ചത്തിലേക്ക്' എന്നതിൻ്റെ ഫ്രഞ്ച് വാക്കാണ്. ഇത് അറിവിന്റെയും ജ്ഞാനോദയത്തിന്റെയും അന്വേഷണത്തെ പ്രതീകപ്പെടുത്തുന്നു."]
+      }
+    },
+    {
+      "tag": "financial_aid",
+      "patterns": {
+        "en": ["financial aid", "education loans", "pm vidyalaxmi scheme"],
+        "hi": ["वित्तीय सहायता", "शिक्षा ऋण"],
+        "ml": ["സാമ്പത്തിക സഹായം", "വിദ്യാഭ്യാസ വായ്പകൾ"]
+      },
+      "responses": {
+        "en": ["The university promotes various scholarships and financial aid options. A key one is the PM-Vidyalaxmi Scheme, a Government of India initiative for collateral-free education loans."],
+        "hi": ["विश्वविद्यालय विभिन्न छात्रवृत्तियों और वित्तीय सहायता विकल्पों को बढ़ावा देता है। एक प्रमुख योजना पीएम-विद्यालक्ष्मी योजना है, जो भारत सरकार की एक पहल है जिसमें बिना किसी गारंटी के शिक्षा ऋण मिलता है।"],
+        "ml": ["സർവകലാശാല വിവിധ സ്കോളർഷിപ്പുകളും സാമ്പത്തിക സഹായ പദ്ധതികളും പ്രോത്സാഹിപ്പിക്കുന്നു. ഇതിൽ പ്രധാനപ്പെട്ട ഒന്നാണ് പിഎം-വിദ്യാലക്ഷ്മി സ്കീം, ഇത് ഈടില്ലാത്ത വിദ്യാഭ്യാസ വായ്പകൾക്കുള്ള ഒരു ഇന്ത്യൻ ഗവൺമെൻ്റ് സംരംഭമാണ്."]
+      }
+    },
+    {
+      "tag": "campus_transport",
+      "patterns": {
+        "en": ["campus transport", "bus facility on campus", "how to travel inside campus"],
+        "hi": ["कैंपस परिवहन", "कैंपस में बस की सुविधा"],
+        "ml": ["ക്യാമ്പസ് ഗതാഗതം", "ക്യാമ്പസിനുള്ളിലെ ബസ് സൗകര്യം"]
+      },
+      "responses": {
+        "en": ["Yes, for the mobility of students within the large campus, bus facility is provided to connect hostels, departments, the library, and other key areas."],
+        "hi": ["हाँ, बड़े परिसर के भीतर छात्रों की आवाजाही के लिए, छात्रावासों, विभागों, पुस्तकालय और अन्य प्रमुख क्षेत्रों को जोड़ने के लिए बस की सुविधा प्रदान की जाती है।"],
+        "ml": ["അതെ, വലിയ ക്യാമ്പസിനുള്ളിൽ വിദ്യാർത്ഥികളുടെ യാത്രയ്ക്കായി ഹോസ്റ്റലുകൾ, ഡിപ്പാർട്ട്‌മെന്റുകൾ, ലൈബ്രറി, മറ്റ് പ്രധാന സ്ഥലങ്ങൾ എന്നിവയെ ബന്ധിപ്പിക്കുന്ന ബസ് സൗകര്യം നൽകിയിട്ടുണ്ട്."]
+      }
+    },
+    {
+  "tag": "admin_block_location",
+  "patterns": {
+    "en": [
+      "where is admin block",
+      "admin block location",
+      "how to get to the admin block"
+    ],
+    "hi": [
+      "एडमिन ब्लॉक कहाँ है",
+      "एडमिन ब्लॉक का स्थान"
+    ],
+    "ml": [
+      "അഡ്മിൻ ബ്ലോക്ക് എവിടെയാണ്",
+      "അഡ്മിൻ ബ്ലോക്കിന്റെ സ്ഥാനം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "The admin block is located near Gate 1."
+    ],
+    "hi": [
+      "एडमिन ब्लॉक गेट 1 के पास स्थित है।"
+    ],
+    "ml": [
+      "അഡ്മിൻ ബ്ലോക്ക് ഗേറ്റ് 1 ന് അടുത്താണ് സ്ഥിതി ചെയ്യുന്നത്."
+    ]
+  }
+},
+{
+  "tag": "phd_admission_process",
+  "patterns": {
+    "en": [
+      "phd admission process",
+      "how can i get admission for phd",
+      "phd eligibility criteria",
+      "tell me about phd admissions"
+    ],
+    "hi": [
+      "पीएचडी प्रवेश प्रक्रिया",
+      "मैं पीएचडी में प्रवेश कैसे ले सकता हूं",
+      "पीएचडी पात्रता मानदंड"
+    ],
+    "ml": [
+      "പിഎച്ച്ഡി പ്രവേശന പ്രക്രിയ",
+      "എനിക്ക് എങ്ങനെ പിഎച്ച്ഡിക്ക് പ്രവേശനം നേടാനാകും",
+      "പിഎച്ച്ഡി യോഗ്യതാ മാനദണ്ഡം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Ph.D. admission is based on an entrance test (Research Methodology & Subject Specific) and an interview. The minimum eligibility is a Master's degree with 55% marks. Candidates with UGC-NET/JRF are often exempt from the test but must attend the interview. You should regularly check the official university website for admission notifications."
+    ],
+    "hi": [
+      "पीएचडी में प्रवेश एक प्रवेश परीक्षा (अनुसंधान पद्धति और विषय विशिष्ट) और एक साक्षात्कार पर आधारित है। न्यूनतम योग्यता 55% अंकों के साथ मास्टर डिग्री है। यूजीसी-नेट/जेआरएफ वाले उम्मीदवारों को अक्सर परीक्षा से छूट दी जाती है, लेकिन उन्हें साक्षात्कार में शामिल होना पड़ता है। आपको प्रवेश सूचनाओं के लिए नियमित रूप से आधिकारिक विश्वविद्यालय की वेबसाइट देखनी चाहिए।"
+    ],
+    "ml": [
+      "പിഎച്ച്ഡി പ്രവേശനം ഒരു പ്രവേശന പരീക്ഷയുടെയും (ഗവേഷണ രീതിശാസ്ത്രം & വിഷയം) അഭിമുഖത്തിന്റെയും അടിസ്ഥാനത്തിലാണ്. 55% മാർക്കോടുകൂടിയ ബിരുദാനന്തര ബിരുദമാണ് കുറഞ്ഞ യോഗ്യത. യുജിസി-നെറ്റ്/ജെആർഎഫ് ഉള്ള ഉദ്യോഗാർത്ഥികളെ സാധാരണയായി പരീക്ഷയിൽ നിന്ന് ഒഴിവാക്കാറുണ്ട്, എങ്കിലും അവർ അഭിമുഖത്തിൽ പങ്കെടുക്കണം. പ്രവേശന അറിയിപ്പുകൾക്കായി നിങ്ങൾ ഔദ്യോഗിക സർവകലാശാല വെബ്സൈറ്റ് പതിവായി പരിശോധിക്കണം."
+    ]
+  }
+},
+{
+  "tag": "placement_cell_contact",
+  "patterns": {
+    "en": [
+      "how to contact placement cell",
+      "placement cell details",
+      "what is the placement cell email"
+    ],
+    "hi": [
+      "प्लेसमेंट सेल से कैसे संपर्क करें",
+      "प्लेसमेंट सेल का विवरण"
+    ],
+    "ml": [
+      "പ്ലേസ്മെന്റ് സെല്ലുമായി എങ്ങനെ ബന്ധപ്പെടാം",
+      "പ്ലേസ്മെന്റ് സെല്ലിന്റെ വിശദാംശങ്ങൾ"
+    ]
+  },
+  "responses": {
+    "en": [
+      "You can contact the placement cell via email at placement@pondiuni.edu.in or by visiting their office in the administrative block."
+    ],
+    "hi": [
+      "आप प्लेसमेंट सेल से placement@pondiuni.edu.in पर ईमेल के माध्यम से संपर्क कर सकते हैं या प्रशासनिक ब्लॉक में उनके कार्यालय में जा सकते हैं।"
+    ],
+    "ml": [
+      "നിങ്ങൾക്ക് പ്ലേസ്‌മെന്റ് സെല്ലുമായി placement@pondiuni.edu.in എന്ന ഇമെയിൽ വിലാസത്തിൽ ബന്ധപ്പെടാം, അല്ലെങ്കിൽ അഡ്മിനിസ്ട്രേറ്റീവ് ബ്ലോക്കിലെ അവരുടെ ഓഫീസിൽ സന്ദർശിക്കാം."
+    ]
+  }
+},
+{
+  "tag": "wifi_access",
+  "patterns": {
+    "en": [
+      "how to connect to campus wifi",
+      "wifi password",
+      "get wifi access"
+    ],
+    "hi": [
+      "कैंपस वाईफाई से कैसे जुड़ें",
+      "वाईफाई पासवर्ड क्या है"
+    ],
+    "ml": [
+      "ക്യാമ്പസ് വൈഫൈയിലേക്ക് എങ്ങനെ കണക്റ്റുചെയ്യാം",
+      "വൈഫൈ പാസ്‌വേഡ്"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Students can connect to the campus Wi-Fi using their university registration number as the username and their date of birth (DDMMYYYY) as the initial password."
+    ],
+    "hi": [
+      "छात्र अपने विश्वविद्यालय पंजीकरण संख्या को उपयोगकर्ता नाम के रूप में और अपनी जन्म तिथि (DDMMYYYY) को प्रारंभिक पासवर्ड के रूप में उपयोग करके कैंपस वाई-फाई से जुड़ सकते हैं।"
+    ],
+    "ml": [
+      "വിദ്യാർത്ഥികൾക്ക് അവരുടെ യൂണിവേഴ്സിറ്റി രജിസ്ട്രേഷൻ നമ്പർ ഉപയോക്തൃനാമമായും, ജനനത്തീയതി (DDMMYYYY) പ്രാരംഭ പാസ്‌വേഡായും ഉപയോഗിച്ച് ക്യാമ്പസ് വൈഫൈയിലേക്ക് കണക്റ്റുചെയ്യാനാകും."
+    ]
+  }
+},
+{
+  "tag": "guest_house_availability",
+  "patterns": {
+    "en": [
+      "is there a guest house on campus",
+      "guest house facility",
+      "accommodation for visitors"
+    ],
+    "hi": [
+      "क्या कैंपस में गेस्ट हाउस है",
+      "गेस्ट हाउस की सुविधा",
+      "आगंतुकों के लिए आवास"
+    ],
+    "ml": [
+      "ക്യാമ്പസിൽ ഗസ്റ്റ് ഹൗസ് ഉണ്ടോ",
+      "ഗസ്റ്റ് ഹൗസ് സൗകര്യം",
+      "സന്ദർശകർക്കുള്ള താമസ സൗകര്യം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Yes, the university has guest houses available for parents, official guests, and visitors attending seminars or workshops. You may need to book in advance."
+    ],
+    "hi": [
+      "हाँ, विश्वविद्यालय में अभिभावकों, आधिकारिक मेहमानों और सेमिनार या कार्यशालाओं में भाग लेने वाले आगंतुकों के लिए गेस्ट हाउस उपलब्ध हैं। आपको पहले से बुकिंग करनी पड़ सकती है।"
+    ],
+    "ml": [
+      "അതെ, സർവ്വകലാശാലയിൽ രക്ഷിതാക്കൾക്കും ഔദ്യോഗിക അതിഥികൾക്കും സെമിനാറുകളിലോ വർക്ക്‌ഷോപ്പുകളിലോ പങ്കെടുക്കുന്ന സന്ദർശകർക്കുമായി ഗസ്റ്റ് ഹൗസുകൾ ലഭ്യമാണ്. മുൻകൂട്ടി ബുക്ക് ചെയ്യേണ്ടി വന്നേക്കാം."
+    ]
+  }
+},
+{
+  "tag": "dde_admission_procedure",
+  "patterns": {
+    "en": [
+      "how to get admission in dde",
+      "dde admission procedure",
+      "distance education application process"
+    ],
+    "hi": [
+      "डीडीई में प्रवेश कैसे लें",
+      "डीडीई प्रवेश प्रक्रिया",
+      "दूरस्थ शिक्षा आवेदन प्रक्रिया"
+    ],
+    "ml": [
+      "ഡിഡിഇയിൽ എങ്ങനെ പ്രവേശനം നേടാം",
+      "ഡിഡിഇ പ്രവേശന നടപടിക്രമം",
+      "വിദൂര വിദ്യാഭ്യാസ അപേക്ഷാ പ്രക്രിയ"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Admissions to DDE courses are done online through the official DDE portal. You need to register, fill out the application form with your personal and academic details, upload the required documents, and pay the application fee online. There is no entrance exam for most DDE courses."
+    ],
+    "hi": [
+      "डीडीई पाठ्यक्रमों में प्रवेश आधिकारिक डीडीई पोर्टल के माध्यम से ऑनलाइन किया जाता है। आपको पंजीकरण करना होगा, आवेदन पत्र को अपने व्यक्तिगत और शैक्षणिक विवरण के साथ भरना होगा, आवश्यक दस्तावेज अपलोड करने होंगे, और आवेदन शुल्क का भुगतान ऑनलाइन करना होगा। अधिकांश डीडीई पाठ्यक्रमों के लिए कोई प्रवेश परीक्षा नहीं है।"
+    ],
+    "ml": [
+      "ഡിഡിഇ കോഴ്‌സുകളിലേക്കുള്ള പ്രവേശനം ഔദ്യോഗിക ഡിഡിഇ പോർട്ടൽ വഴി ഓൺലൈനായിട്ടാണ് നടത്തുന്നത്. നിങ്ങൾ രജിസ്റ്റർ ചെയ്യുകയും, അപേക്ഷാ ഫോം പൂരിപ്പിക്കുകയും, ആവശ്യമായ രേഖകൾ അപ്‌ലോഡ് ചെയ്യുകയും, അപേക്ഷാ ഫീസ് ഓൺലൈനായി അടയ്ക്കുകയും വേണം. മിക്ക ഡിഡിഇ കോഴ്‌സുകൾക്കും പ്രവേശന പരീക്ഷയില്ല."
+    ]
+  }
+},
+{
+  "tag": "dde_contact_info",
+  "patterns": {
+    "en": [
+      "dde contact number",
+      "how to contact distance education office",
+      "dde email address"
+    ],
+    "hi": [
+      "डीडीई संपर्क नंबर",
+      "दूरस्थ शिक्षा कार्यालय से कैसे संपर्क करें"
+    ],
+    "ml": [
+      "ഡിഡിഇ കോൺടാക്റ്റ് നമ്പർ",
+      "വിദൂര വിദ്യാഭ്യാസ ഓഫീസുമായി എങ്ങനെ ബന്ധപ്പെടാം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "You can contact the Directorate of Distance Education office at 0413-2654440 or email them at director.dde@pondiuni.edu.in for any queries."
+    ],
+    "hi": [
+      "आप किसी भी प्रश्न के लिए दूरस्थ शिक्षा निदेशालय कार्यालय से 0413-2654440 पर संपर्क कर सकते हैं या उन्हें director.dde@pondiuni.edu.in पर ईमेल कर सकते हैं।"
+    ],
+    "ml": [
+      "ഏത് സംശയങ്ങൾക്കും നിങ്ങൾക്ക് ഡയറക്ടറേറ്റ് ഓഫ് ഡിസ്റ്റൻസ് എജ്യുക്കേഷൻ ഓഫീസുമായി 0413-2654440 എന്ന നമ്പറിൽ ബന്ധപ്പെടാം അല്ലെങ്കിൽ director.dde@pondiuni.edu.in എന്ന വിലാസത്തിൽ ഇമെയിൽ ചെയ്യാവുന്നതാണ്."
+    ]
+  }
+},
+{
+  "tag": "university_election_details",
+  "patterns": {
+    "en": [
+      "university election",
+      "when is the student council election",
+      "tell me about campus elections"
+    ],
+    "hi": [
+      "विश्वविद्यालय चुनाव",
+      "छात्र संघ चुनाव कब है",
+      "कैंपस चुनाव के बारे में बताएं"
+    ],
+    "ml": [
+      "യൂണിവേഴ്സിറ്റി തിരഞ്ഞെടുപ്പ്",
+      "സ്റ്റുഡന്റ് കൗൺസിൽ ഇലക്ഷൻ എപ്പോഴാണ്",
+      "ക്യാമ്പസ് തിരഞ്ഞെടുപ്പിനെക്കുറിച്ച് പറയുക"
+    ]
+  },
+  "responses": {
+    "en": [
+      "The Pondicherry University Students' Council election is usually announced around late October or November. Students vote for key positions like President and General Secretary. For the official schedule and nomination details, please check the university website."
+    ],
+    "hi": [
+      "पॉन्डिचेरी विश्वविद्यालय छात्र परिषद का चुनाव आमतौर पर अक्टूबर के अंत या नवंबर के आसपास घोषित किया जाता है। छात्र अध्यक्ष और महासचिव जैसे प्रमुख पदों के लिए मतदान करते हैं। आधिकारिक कार्यक्रम और नामांकन विवरण के लिए, कृपया विश्वविद्यालय की वेबसाइट देखें।"
+    ],
+    "ml": [
+      "പോണ്ടിച്ചേരി യൂണിവേഴ്സിറ്റി സ്റ്റുഡന്റ്സ് കൗൺസിൽ തിരഞ്ഞെടുപ്പ് സാധാരണയായി ഒക്ടോബർ അവസാനമോ നവംബറിലോ ആണ് പ്രഖ്യാപിക്കുന്നത്. പ്രസിഡന്റ്, ജനറൽ സെക്രട്ടറി തുടങ്ങിയ പ്രധാന തസ്തികകളിലേക്കാണ് വിദ്യാർത്ഥികൾ വോട്ട് ചെയ്യുന്നത്. ഔദ്യോഗിക ഷെഡ്യൂളിനും നോമിനേഷൻ വിശദാംശങ്ങൾക്കുമായി ദയവായി യൂണിവേഴ്സിറ്റി വെബ്സൈറ്റ് പരിശോധിക്കുക."
+    ]
+  }
+},
+{
+  "tag": "current_student_council",
+  "patterns": {
+    "en": [
+      "who is in the current student council",
+      "current committee details",
+      "student union members"
+    ],
+    "hi": [
+      "वर्तमान छात्र परिषद में कौन है",
+      "वर्तमान समिति का विवरण",
+      "छात्र संघ के सदस्य"
+    ],
+    "ml": [
+      "നിലവിലെ സ്റ്റുഡന്റ് കൗൺസിലിൽ ആരാണുള്ളത്",
+      "നിലവിലെ കമ്മിറ്റി വിശദാംശങ്ങൾ",
+      "സ്റ്റുഡന്റ് യൂണിയൻ അംഗങ്ങൾ"
+    ]
+  },
+  "responses": {
+    "en": [
+      "The 2024-2025 Students' Council is led by the Social Democratic Students' Front (SDSF). The President is P. Parichay Yadav (SFI), the Vice-President is Hibathul Rifah (ASA), and the General Secretary is G. Anusree (SFI)."
+    ],
+    "hi": [
+      "2024-2025 की छात्र परिषद का नेतृत्व सोशल डेमोक्रेटिक स्टूडेंट्स फ्रंट (एसडीएसएफ) कर रहा है। अध्यक्ष पी. परिचाय यादव (एसएफआई), उपाध्यक्ष हिबतुल रिफा (एएसए), और महासचिव जी. अनुश्री (एसएफआई) हैं।"
+    ],
+    "ml": [
+      "2024-2025ലെ സ്റ്റുഡന്റ്സ് കൗൺസിലിനെ നയിക്കുന്നത് സോഷ്യൽ ഡെമോക്രാറ്റിക് സ്റ്റുഡന്റ്സ് ഫ്രണ്ട് (എസ്ഡിഎസ്എഫ്) ആണ്. പ്രസിഡന്റ് പി. പരിചയ് യാദവ് (എസ്എഫ്ഐ), വൈസ് പ്രസിഡന്റ് ഹിബത്തുൽ റിഫ (എഎസ്എ), ജനറൽ സെക്രട്ടറി ജി. അനുശ്രീ (എസ്എഫ്ഐ) എന്നിവരാണ്."
+    ]
+  }
+},
+{
+  "tag": "election_win_history",
+  "patterns": {
+    "en": [
+      "all the win count of the previous years",
+      "past election results",
+      "who won the election in previous years"
+    ],
+    "hi": [
+      "पिछले वर्षों की सभी जीत की गिनती",
+      "पिछले चुनाव परिणाम",
+      "पिछले वर्षों में चुनाव कौन जीता"
+    ],
+    "ml": [
+      "മുൻ വർഷങ്ങളിലെ വിജയങ്ങളുടെ എണ്ണം",
+      "കഴിഞ്ഞ തിരഞ്ഞെടുപ്പ് ഫലങ്ങൾ",
+      "മുൻ വർഷങ്ങളിൽ തിരഞ്ഞെടുപ്പിൽ ആരാണ് വിജയിച്ചത്"
+    ]
+  },
+  "responses": {
+    "en": [
+      "The SFI-ASA alliance, often under the SDSF banner, has consistently won the majority of key posts, including President and General Secretary, in the student council elections for the past several years (2024, 2023, 2019, 2018)."
+    ],
+    "hi": [
+      "एसएफआई-एएसए गठबंधन, अक्सर एसडीएसएफ बैनर के तहत, पिछले कई वर्षों (2024, 2023, 2019, 2018) से छात्र परिषद चुनावों में अध्यक्ष और महासचिव सहित अधिकांश प्रमुख पदों पर लगातार जीत हासिल करता रहा है।"
+    ],
+    "ml": [
+      "എസ്എഫ്ഐ-എഎസ്എ സഖ്യം, പലപ്പോഴും എസ്ഡിഎസ്എഫ് ബാനറിൽ, കഴിഞ്ഞ കുറേ വർഷങ്ങളായി (2024, 2023, 2019, 2018) സ്റ്റുഡന്റ് കൗൺസിൽ തിരഞ്ഞെടുപ്പിൽ പ്രസിഡന്റും ജനറൽ സെക്രട്ടറിയും ഉൾപ്പെടെയുള്ള പ്രധാന തസ്തികകളിൽ ഭൂരിഭാഗവും തുടർച്ചയായി വിജയിച്ചുവരുന്നു."
+    ]
+  }
+},
+
+{
+  "tag": "ragging_policy",
+  "patterns": {
+    "en": [
+      "what is the policy on ragging",
+      "ragging helpline",
+      "anti-ragging committee"
+    ],
+    "hi": [
+      "रैगिंग पर क्या नीति है",
+      "रैगिंग हेल्पलाइन",
+      "एंटी-रैगिंग समिति"
+    ],
+    "ml": [
+      "റാഗിംഗിനെക്കുറിച്ചുള്ള നയം എന്താണ്",
+      "റാഗിംഗ് ഹെൽപ്പ് ലൈൻ",
+      "ആന്റി റാഗിംഗ് കമ്മിറ്റി"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Pondicherry University has a zero-tolerance policy against ragging. It is a punishable offense, and students can report incidents to the Anti-Ragging Committee or the national helpline."
+    ],
+    "hi": [
+      "पॉन्डिचेरी विश्वविद्यालय में रैगिंग के खिलाफ शून्य-सहिष्णुता की नीति है। यह एक दंडनीय अपराध है, और छात्र एंटी-रैगिंग समिति या राष्ट्रीय हेल्पलाइन पर घटनाओं की रिपोर्ट कर सकते हैं।"
+    ],
+    "ml": [
+      "പോണ്ടിച്ചേരി സർവ്വകലാശാലയ്ക്ക് റാഗിംഗിനെതിരെ സീറോ-ടോളറൻസ് നയമുണ്ട്. ഇത് ശിക്ഷാർഹമായ കുറ്റമാണ്, വിദ്യാർത്ഥികൾക്ക് ആന്റി-റാഗിംഗ് കമ്മിറ്റിയിലോ ദേശീയ ഹെൽപ്പ് ലൈനിലോ സംഭവങ്ങൾ റിപ്പോർട്ട് ചെയ്യാം."
+    ]
+  }
+},
+{
+  "tag": "hostel_application_process",
+  "patterns": {
+    "en": [
+      "how to apply for hostel accommodation",
+      "hostel admission",
+      "need a hostel room"
+    ],
+    "hi": [
+      "छात्रावास आवास के लिए आवेदन कैसे करें",
+      "छात्रावास में प्रवेश",
+      "छात्रावास का कमरा चाहिए"
+    ],
+    "ml": [
+      "ഹോസ്റ്റൽ താമസത്തിനായി എങ്ങനെ അപേക്ഷിക്കാം",
+      "ഹോസ്റ്റൽ പ്രവേശനം",
+      "ഒരു ഹോസ്റ്റൽ മുറി വേണം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Students can apply for a hostel room online through the university's main portal after their course admission is confirmed. Allotment is subject to availability and university regulations."
+    ],
+    "hi": [
+      "छात्र अपने पाठ्यक्रम में प्रवेश की पुष्टि होने के बाद विश्वविद्यालय के मुख्य पोर्टल के माध्यम से छात्रावास के कमरे के लिए ऑनलाइन आवेदन कर सकते हैं। आवंटन उपलब्धता और विश्वविद्यालय के नियमों के अधीन है।"
+    ],
+    "ml": [
+      "വിദ്യാർത്ഥികൾക്ക് കോഴ്സ് പ്രവേശനം സ്ഥിരീകരിച്ച ശേഷം സർവകലാശാലയുടെ പ്രധാന പോർട്ടൽ വഴി ഓൺലൈനായി ഹോസ്റ്റൽ മുറിക്കായി അപേക്ഷിക്കാം. സീറ്റുകളുടെ ലഭ്യതയും സർവകലാശാലാ നിയമങ്ങളും അനുസരിച്ചായിരിക്കും പ്രവേശനം."
+    ]
+  }
+},
+{
+  "tag": "how_to_reach_university",
+  "patterns": {
+    "en": [
+      "how do i get to the university",
+      "directions to pondicherry university",
+      "transportation to campus"
+    ],
+    "hi": [
+      "मैं विश्वविद्यालय कैसे पहुँचूँ",
+      "पॉन्डिचेरी विश्वविद्यालय के लिए दिशा-निर्देश",
+      "कैंपस के लिए परिवहन"
+    ],
+    "ml": [
+      "ഞാൻ എങ്ങനെ സർവകലാശാലയിൽ എത്തും",
+      "പോണ്ടിച്ചേരി സർവകലാശാലയിലേക്കുള്ള വഴികൾ",
+      "ക്യാമ്പസിലേക്കുള്ള ഗതാഗതം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "The university is located on the East Coast Road (ECR), about 12 km from Puducherry town. You can take a direct bus from the main bus stand or hire an auto-rickshaw/taxi to reach the campus."
+    ],
+    "hi": [
+      "विश्वविद्यालय ईस्ट कोस्ट रोड (ईसीआर) पर स्थित है, जो पुडुचेरी शहर से लगभग 12 किमी दूर है। आप मुख्य बस स्टैंड से सीधी बस ले सकते हैं या परिसर तक पहुंचने के लिए ऑटो-रिक्शा/टैक्सी किराए पर ले सकते हैं।"
+    ],
+    "ml": [
+      "പുതുച്ചേരി പട്ടണത്തിൽ നിന്ന് ഏകദേശം 12 കിലോമീറ്റർ അകലെ ഈസ്റ്റ് കോസ്റ്റ് റോഡിലാണ് (ഇസിആർ) സർവകലാശാല സ്ഥിതി ചെയ്യുന്നത്. പ്രധാന ബസ് സ്റ്റാൻഡിൽ നിന്ന് നേരിട്ടുള്ള ബസിൽ കയറുകയോ ഓട്ടോറിക്ഷ/ടാക്സി വാടകയ്‌ക്കെടുക്കുകയോ ചെയ്ത് ക്യാമ്പസിലെത്താം."
+    ]
+  }
+},
+
+{
+  "tag": "academic_calendar_detailed",
+  "patterns": {
+    "en": [
+      "detailed academic calendar",
+      "give me the whole academic schedule",
+      "exact exam dates and holidays"
+    ],
+    "hi": [
+      "विस्तृत अकादमिक कैलेंडर",
+      "मुझे पूरा अकादमिक शेड्यूल दें",
+      "परीक्षा की सटीक तिथियां और छुट्टियां"
+    ],
+    "ml": [
+      "വിശദമായ അക്കാദമിക് കലണ്ടർ",
+      "എനിക്ക് മുഴുവൻ അക്കാദമിക് ഷെഡ്യൂൾ തരൂ",
+      "കൃത്യമായ പരീക്ഷാ തീയതികളും അവധിദിനങ്ങളും"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Here are the key dates for the Monsoon Semester 2025:\n\n**Monsoon Semester (August - December 2025):**\n- Classes Commenced: August 5, 2025\n- Internal Assessment I: September 15-20, 2025\n- Internal Assessment II: October 27-31, 2025\n- Last Day of Instruction: November 28, 2025\n\n**Examinations:**\n- Practical Exams: November 29 - December 5, 2025\n- Theory End-Semester Exams: December 8 - December 20, 2025\n\n**Upcoming Winter Semester:**\n- Semester Break: December 21, 2025 - January 4, 2026\n- Winter Semester Begins: January 5, 2026\n\n(Note: These are typical dates. Please check the official university website for the definitive schedule.)"
+    ],
+    "hi": [
+      "मानसून सेमेस्टर 2025 के लिए मुख्य तिथियां यहाँ दी गई हैं:\n\n**मानसून सेमेस्टर (अगस्त - दिसंबर 2025):**\n- कक्षाएं शुरू: 5 अगस्त, 2025\n- आंतरिक मूल्यांकन I: 15-20 सितंबर, 2025\n- आंतरिक मूल्यांकन II: 27-31 अक्टूबर, 2025\n- शिक्षण का अंतिम दिन: 28 नवंबर, 2025\n\n**परीक्षाएं:**\n- प्रैक्टिकल परीक्षाएं: 29 नवंबर - 5 दिसंबर, 2025\n- थ्योरी अंत-सेमेस्टर परीक्षाएं: 8 दिसंबर - 20 दिसंबर, 2025\n\n**आगामी शीतकालीन सेमेस्टर:**\n- सेमेस्टर ब्रेक: 21 दिसंबर, 2025 - 4 जनवरी, 2026\n- शीतकालीन सेमेस्टर शुरू: 5 जनवरी, 2026\n\n(ध्यान दें: ये सामान्य तिथियां हैं। निश्चित समय-सारणी के लिए कृपया आधिकारिक विश्वविद्यालय की वेबसाइट देखें।)"
+    ],
+    "ml": [
+      "മൺസൂൺ സെമസ്റ്റർ 2025-ലെ പ്രധാന തീയതികൾ താഴെ നൽകുന്നു:\n\n**മൺസൂൺ സെമസ്റ്റർ (ഓഗസ്റ്റ് - ഡിസംബർ 2025):**\n- ക്ലാസുകൾ ആരംഭിച്ചത്: ഓഗസ്റ്റ് 5, 2025\n- ഇന്റേണൽ അസസ്മെന്റ് I: സെപ്റ്റംബർ 15-20, 2025\n- ഇന്റേണൽ അസസ്മെന്റ് II: ഒക്ടോബർ 27-31, 2025\n- അദ്ധ്യാപനത്തിന്റെ അവസാന ദിവസം: നവംബർ 28, 2025\n\n**പരീക്ഷകൾ:**\n- പ്രാക്ടിക്കൽ പരീക്ഷകൾ: നവംബർ 29 - ഡിസംബർ 5, 2025\n- തിയറി എൻഡ്-സെമസ്റ്റർ പരീക്ഷകൾ: ഡിസംബർ 8 - ഡിസംബർ 20, 2025\n\n**വരാനിരിക്കുന്ന വിന്റർ സെമസ്റ്റർ:**\n- സെമസ്റ്റർ അവധി: ഡിസംബർ 21, 2025 - ജനുവരി 4, 2026\n- വിന്റർ സെമസ്റ്റർ ആരംഭിക്കുന്നത്: ജനുവരി 5, 2026\n\n(ശ്രദ്ധിക്കുക: ഇവ സാധാരണ തീയതികളാണ്. കൃത്യമായ ഷെഡ്യൂളിനായി ദയവായി ഔദ്യോഗിക യൂണിവേഴ്സിറ്റി വെബ്സൈറ്റ് പരിശോധിക്കുക.)"
+    ]
+  }
+},
+{
+  "tag": "scholarship_details",
+  "patterns": {
+    "en": [
+      "are there any scholarships available",
+      "how to apply for a scholarship",
+      "financial aid for students"
+    ],
+    "hi": [
+      "क्या कोई छात्रवृत्ति उपलब्ध है",
+      "छात्रवृत्ति के लिए आवेदन कैसे करें",
+      "छात्रों के लिए वित्तीय सहायता"
+    ],
+    "ml": [
+      "എന്തെങ്കിലും സ്കോളർഷിപ്പുകൾ ലഭ്യമാണോ",
+      "സ്കോളർഷിപ്പിന് എങ്ങനെ അപേക്ഷിക്കാം",
+      "വിദ്യാർത്ഥികൾക്കുള്ള സാമ്പത്തിക സഹായം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Yes, Pondicherry University offers various scholarships, including merit-based scholarships for toppers and financial assistance for deserving students. Students can also apply for national scholarships through the university. For a complete list and application procedures, please check the 'Scholarships' section on the university website."
+    ],
+    "hi": [
+      "हाँ, पॉन्डिचेरी विश्वविद्यालय विभिन्न छात्रवृत्तियाँ प्रदान करता है, जिसमें टॉपर्स के लिए योग्यता-आधारित छात्रवृत्तियाँ और योग्य छात्रों के लिए वित्तीय सहायता शामिल है। छात्र विश्वविद्यालय के माध्यम से राष्ट्रीय छात्रवृत्तियों के लिए भी आवेदन कर सकते हैं। पूरी सूची और आवेदन प्रक्रियाओं के लिए, कृपया विश्वविद्यालय की वेबसाइट पर 'छात्रवृत्ति' अनुभाग देखें।"
+    ],
+    "ml": [
+      "അതെ, പോണ്ടിച്ചേരി സർവ്വകലാശാല ടോപ്പർമാർക്കുള്ള മെറിറ്റ് സ്കോളർഷിപ്പുകളും അർഹരായ വിദ്യാർത്ഥികൾക്ക് സാമ്പത്തിക സഹായവും ഉൾപ്പെടെ വിവിധ സ്കോളർഷിപ്പുകൾ വാഗ്ദാനം ചെയ്യുന്നു. വിദ്യാർത്ഥികൾക്ക് സർവ്വകലാശാല വഴി ദേശീയ സ്കോളർഷിപ്പുകൾക്കും അപേക്ഷിക്കാം. പൂർണ്ണമായ ലിസ്റ്റിനും അപേക്ഷാ നടപടിക്രമങ്ങൾക്കുമായി, ദയവായി സർവ്വകലാശാല വെബ്സൈറ്റിലെ 'സ്കോളർഷിപ്പുകൾ' എന്ന വിഭാഗം പരിശോധിക്കുക."
+    ]
+  }
+},
+{
+  "tag": "campus_food_details",
+  "patterns": {
+    "en": [
+      "detailed food options on campus",
+      "tell me more about the canteens",
+      "what kind of food is available on campus"
+    ],
+    "hi": [
+      "कैंपस में भोजन के विस्तृत विकल्प",
+      "कैंटीन के बारे में और बताएं",
+      "कैंपस में किस तरह का खाना उपलब्ध है"
+    ],
+    "ml": [
+      "ക്യാമ്പസിലെ വിശദമായ ഭക്ഷണ ഓപ്ഷനുകൾ",
+      "കാന്റീനുകളെക്കുറിച്ച് കൂടുതൽ പറയൂ",
+      "ക്യാമ്പസിൽ എങ്ങനെയുള്ള ഭക്ഷണമാണ് ലഭ്യമാകുന്നത്"
+    ]
+  },
+  "responses": {
+    "en": [
+      "The university has three main canteens and other food spots. \n- **Canteen I:** Located near the Admin Block, it mainly serves South Indian food. \n- **Canteen II:** Situated near the Science Block, this also offers South Indian dishes. \n- **Canteen III:** Found next to the School of Management, this canteen specializes in North Indian and Chinese cuisine, including chats. \nAdditionally, there's a bakery and coffee shop in the shopping complex, and Ponlait outlets sell milk products."
+    ],
+    "hi": [
+      "विश्वविद्यालय में तीन मुख्य कैंटीन और अन्य भोजन स्थल हैं। \n- **कैंटीन I:** एडमिन ब्लॉक के पास स्थित, यह मुख्य रूप से दक्षिण भारतीय भोजन परोसता है। \n- **कैंटीन II:** साइंस ब्लॉक के पास स्थित, यह भी दक्षिण भारतीय व्यंजन प्रदान करता है। \n- **कैंटीन III:** स्कूल ऑफ मैनेजमेंट के बगल में स्थित, यह कैंटीन उत्तर भारतीय और चीनी व्यंजनों में माहिर है, जिसमें चाट भी शामिल है। \nइसके अतिरिक्त, शॉपिंग कॉम्प्लेक्स में एक बेकरी और कॉफी शॉप है, और पॉनलाइट आउटलेट दूध के उत्पाद बेचते हैं।"
+    ],
+    "ml": [
+      "സർവകലാശാലയിൽ മൂന്ന് പ്രധാന കാന്റീനുകളും മറ്റ് ഭക്ഷണശാലകളുമുണ്ട്.\n- **കാന്റീൻ I:** അഡ്മിൻ ബ്ലോക്കിന് സമീപം സ്ഥിതി ചെയ്യുന്ന ഇവിടെ പ്രധാനമായും ദക്ഷിണേന്ത്യൻ ഭക്ഷണം ലഭ്യമാണ്.\n- **കാന്റീൻ II:** സയൻസ് ബ്ലോക്കിന് സമീപമുള്ള ഇവിടെയും ദക്ഷിണേന്ത്യൻ വിഭവങ്ങൾ ലഭ്യമാണ്.\n- **കാന്റീൻ III:** സ്കൂൾ ഓഫ് മാനേജ്മെന്റിന് അടുത്തുള്ള ഈ കാന്റീനിൽ നോർത്ത് ഇന്ത്യൻ, ചൈനീസ് വിഭവങ്ങളും ചാറ്റുകളും ലഭ്യമാണ്.\nകൂടാതെ, ഷോപ്പിംഗ് കോംപ്ലക്സിൽ ഒരു ബേക്കറിയും കോഫി ഷോപ്പുമുണ്ട്, പോൺലൈറ്റ് ഔട്ട്‌ലെറ്റുകളിൽ പാൽ ഉൽപ്പന്നങ്ങൾ വിൽക്കുന്നു."
+    ]
+  }
+},
+{
+  "tag": "sports_facilities",
+  "patterns": {
+    "en": [
+      "sports facilities on campus",
+      "where is the playground",
+      "does the university have a gym"
+    ],
+    "hi": [
+      "कैंपस में खेल सुविधाएं",
+      "खेल का मैदान कहाँ है",
+      "क्या विश्वविद्यालय में जिम है"
+    ],
+    "ml": [
+      "ക്യാമ്പസിലെ കായിക സൗകര്യങ്ങൾ",
+      "കളിസ്ഥലം എവിടെയാണ്",
+      "സർവകലാശാലയിൽ ജിം ഉണ്ടോ"
+    ]
+  },
+  "responses": {
+    "en": [
+      "The university has extensive sports facilities, including a large playground for cricket and football, basketball and volleyball courts, and an indoor stadium. There is also a well-equipped gymnasium for students located in the sports complex."
+    ],
+    "hi": [
+      "विश्वविद्यालय में व्यापक खेल सुविधाएं हैं, जिनमें क्रिकेट और फुटबॉल के लिए एक बड़ा खेल का मैदान, बास्केटबॉल और वॉलीबॉल कोर्ट और एक इनडोर स्टेडियम शामिल है। खेल परिसर में छात्रों के लिए एक सुसज्जित व्यायामशाला भी है।"
+    ],
+    "ml": [
+      "ക്രിക്കറ്റിനും ഫുട്ബോളിനുമുള്ള ഒരു വലിയ കളിസ്ഥലം, ബാസ്കറ്റ്ബോൾ, വോളിബോൾ കോർട്ടുകൾ, ഒരു ഇൻഡോർ സ്റ്റേഡിയം എന്നിവയുൾപ്പെടെ സർവകലാശാലയ്ക്ക് വിപുലമായ കായിക സൗകര്യങ്ങളുണ്ട്. സ്പോർട്സ് കോംപ്ലക്സിൽ വിദ്യാർത്ഥികൾക്കായി സജ്ജീകരിച്ച ഒരു ജിംനേഷ്യവും ഉണ്ട്."
+    ]
+  }
+},
+{
+  "tag": "degree_certificate_procedure",
+  "patterns": {
+    "en": [
+      "how to get my degree certificate",
+      "procedure for original degree",
+      "convocation details"
+    ],
+    "hi": [
+      "मेरी डिग्री प्रमाणपत्र कैसे प्राप्त करें",
+      "मूल डिग्री के लिए प्रक्रिया",
+      "दीक्षांत समारोह का विवरण"
+    ],
+    "ml": [
+      "എൻ്റെ ഡിഗ്രി സർട്ടിഫിക്കറ്റ് എങ്ങനെ ലഭിക്കും",
+      "ഒറിജിനൽ ഡിഗ്രി ലഭിക്കുന്നതിനുള്ള നടപടിക്രമം",
+      "ബിരുദദാന ചടങ്ങിൻ്റെ വിശദാംശങ്ങൾ"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Degree certificates are typically awarded during the annual convocation. Students who cannot attend can apply to receive it by post by filling out the 'In Absentia' form and paying the prescribed fee. You can find the form on the Controller of Examinations section of the university website."
+    ],
+    "hi": [
+      "डिग्री प्रमाण पत्र आमतौर पर वार्षिक दीक्षांत समारोह के दौरान प्रदान किए जाते हैं। जो छात्र उपस्थित नहीं हो सकते, वे 'अनुपस्थिति में' फॉर्म भरकर और निर्धारित शुल्क का भुगतान करके इसे डाक द्वारा प्राप्त करने के लिए आवेदन कर सकते हैं। आप यह फॉर्म विश्वविद्यालय की वेबसाइट पर परीक्षा नियंत्रक अनुभाग में पा सकते हैं।"
+    ],
+    "ml": [
+      "ഡിഗ്രി സർട്ടിഫിക്കറ്റുകൾ സാധാരണയായി വാർഷിക ബിരുദദാന ചടങ്ങിലാണ് നൽകുന്നത്. പങ്കെടുക്കാൻ കഴിയാത്ത വിദ്യാർത്ഥികൾക്ക് 'ഇൻ അബ്സെൻഷ്യ' ഫോം പൂരിപ്പിച്ച് നിശ്ചിത ഫീസ് അടച്ച് തപാൽ വഴി സർട്ടിഫിക്കറ്റ് ലഭിക്കാൻ അപേക്ഷിക്കാം. സർവകലാശാലയുടെ വെബ്സൈറ്റിലെ കൺട്രോളർ ഓഫ് എക്സാമിനേഷൻസ് വിഭാഗത്തിൽ നിന്ന് നിങ്ങൾക്ക് ഈ ഫോം കണ്ടെത്താനാകും."
+    ]
+  }
+},
+{
+  "tag": "grievance_redressal",
+  "patterns": {
+    "en": [
+      "how to file a complaint",
+      "student grievance cell",
+      "where to report an issue"
+    ],
+    "hi": [
+      "शिकायत कैसे दर्ज करें",
+      "छात्र शिकायत निवारण सेल",
+      "किसी मुद्दे की रिपोर्ट कहाँ करें"
+    ],
+    "ml": [
+      "എങ്ങനെ പരാതി നൽകാം",
+      "വിദ്യാർത്ഥി പരാതി പരിഹാര സെൽ",
+      "ഒരു പ്രശ്നം എവിടെ റിപ്പോർട്ട് ചെയ്യാം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Students can address their grievances through the Student Grievance Redressal Cell (SGRC). You can submit a formal complaint to the Dean of Students' Welfare. For specific issues, you can also approach your Head of Department or the respective administrative section."
+    ],
+    "hi": [
+      "छात्र अपनी शिकायतें छात्र शिकायत निवारण सेल (एसजीआरसी) के माध्यम से दर्ज करा सकते हैं। आप छात्र कल्याण के डीन को एक औपचारिक शिकायत प्रस्तुत कर सकते हैं। विशिष्ट मुद्दों के लिए, आप अपने विभागाध्यक्ष या संबंधित प्रशासनिक अनुभाग से भी संपर्क कर सकते हैं।"
+    ],
+    "ml": [
+      "വിദ്യാർത്ഥികൾക്ക് അവരുടെ പരാതികൾ സ്റ്റുഡൻ്റ് ഗ്രീവൻസ് റിഡ്രസൽ സെൽ (SGRC) വഴി സമർപ്പിക്കാവുന്നതാണ്. നിങ്ങൾക്ക് ഡീൻ ഓഫ് സ്റ്റുഡൻ്റ്സ് വെൽഫെയറിന് ഔദ്യോഗികമായി പരാതി നൽകാം. പ്രത്യേക പ്രശ്നങ്ങൾക്ക്, നിങ്ങളുടെ വകുപ്പ് മേധാവിയെയോ ബന്ധപ്പെട്ട അഡ്മിനിസ്ട്രേറ്റീവ് വിഭാഗത്തെയോ സമീപിക്കാവുന്നതാണ്."
+    ]
+  }
+},
+{
+  "tag": "fee_payment_procedure",
+  "patterns": {
+    "en": [
+      "how to pay semester fees",
+      "online fee payment link",
+      "what is the last date for fee payment"
+    ],
+    "hi": [
+      "सेमेस्टर शुल्क का भुगतान कैसे करें",
+      "ऑनलाइन शुल्क भुगतान लिंक",
+      "शुल्क भुगतान की अंतिम तिथि क्या है"
+    ],
+    "ml": [
+      "സെമസ്റ്റർ ഫീസ് എങ്ങനെ അടക്കാം",
+      "ഓൺലൈൻ ഫീസ് പേയ്മെൻ്റ് ലിങ്ക്",
+      "ഫീസ് അടയ്ക്കാനുള്ള അവസാന തീയതി എന്നാണ്"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Semester fees must be paid online through the official PU-CAMs portal on the university website. Students need to log in with their credentials to access the payment gateway. The deadline for payment is announced at the start of each semester."
+    ],
+    "hi": [
+      "सेमेस्टर शुल्क का भुगतान विश्वविद्यालय की वेबसाइट पर आधिकारिक पीयू-सीएएमएस पोर्टल के माध्यम से ऑनलाइन किया जाना चाहिए। छात्रों को भुगतान गेटवे तक पहुंचने के लिए अपने क्रेडेंशियल्स के साथ लॉग इन करना होगा। भुगतान की अंतिम तिथि प्रत्येक सेमेस्टर की शुरुआत में घोषित की जाती है।"
+    ],
+    "ml": [
+      "സെമസ്റ്റർ ഫീസ് സർവകലാശാലയുടെ വെബ്സൈറ്റിലെ ഔദ്യോഗിക PU-CAMs പോർട്ടൽ വഴി ഓൺലൈനായി അടയ്ക്കണം. പേയ്‌മെന്റ് ഗേറ്റ്‌വേ ആക്‌സസ് ചെയ്യുന്നതിന് വിദ്യാർത്ഥികൾ അവരുടെ ക്രെഡൻഷ്യലുകൾ ഉപയോഗിച്ച് ലോഗിൻ ചെയ്യേണ്ടതുണ്ട്. ഓരോ സെമസ്റ്ററിന്റെയും തുടക്കത്തിൽ ഫീസ് അടയ്ക്കാനുള്ള അവസാന തീയതി പ്രഖ്യാപിക്കും."
+    ]
+  }
+},
+{
+  "tag": "student_id_card",
+  "patterns": {
+    "en": [
+      " ",
+      "i lost my id card",
+      "procedure for duplicate id card"
+    ],
+    "hi": [
+      "छात्र आईडी कार्ड कैसे प्राप्त करें",
+      "मेरा आईडी कार्ड खो गया",
+      "डुप्लीकेट आईडी कार्ड के लिए प्रक्रिया"
+    ],
+    "ml": [
+      "സ്റ്റുഡൻ്റ് ഐഡി കാർഡ് എങ്ങനെ ലഭിക്കും",
+      "എൻ്റെ ഐഡി കാർഡ് നഷ്ടപ്പെട്ടു",
+      "ഡ്യൂപ്ലിക്കേറ്റ് ഐഡി കാർഡിനുള്ള നടപടിക്രമം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "New students can collect their official ID cards from their respective department offices once the admission process is complete. If you lose your ID card, you must immediately report it to the Chief Warden's office and apply for a duplicate."
+    ],
+    "hi": [
+      "नए छात्र प्रवेश प्रक्रिया पूरी होने के बाद अपने संबंधित विभाग के कार्यालयों से अपना आधिकारिक आईडी कार्ड प्राप्त कर सकते हैं। यदि आप अपना आईडी कार्ड खो देते हैं, तो आपको तुरंत मुख्य वार्डन के कार्यालय में इसकी सूचना देनी होगी और डुप्लीकेट के लिए आवेदन करना होगा।"
+    ],
+    "ml": [
+      "പുതിയ വിദ്യാർത്ഥികൾക്ക് പ്രവേശന നടപടികൾ പൂർത്തിയായിക്കഴിഞ്ഞാൽ അതത് വകുപ്പ് ഓഫീസുകളിൽ നിന്ന് ഔദ്യോഗിക ഐഡി കാർഡുകൾ വാങ്ങാവുന്നതാണ്. നിങ്ങളുടെ ഐഡി കാർഡ് നഷ്ടപ്പെട്ടാൽ, നിങ്ങൾ ഉടൻ തന്നെ ചീഫ് വാർഡന്റെ ഓഫീസിൽ റിപ്പോർട്ട് ചെയ്യുകയും ഡ്യൂപ്ലിക്കേറ്റിനായി അപേക്ഷിക്കുകയും വേണം."
+    ]
+  }
+},
+{
+  "tag": "exam_results_website",
+  "patterns": {
+    "en": [
+      "which site will exam results be published",
+      "where can i find the exam result link",
+      "exam result website"
+    ],
+    "hi": [
+      "परीक्षा परिणाम किस साइट पर प्रकाशित होंगे",
+      "मुझे परीक्षा परिणाम का लिंक कहां मिल सकता है",
+      "परीक्षा परिणाम वेबसाइट"
+    ],
+    "ml": [
+      "ഏത് സൈറ്റിലാണ് പരീക്ഷാഫലം പ്രസിദ്ധീകരിക്കുക",
+      "എനിക്ക് പരീക്ഷാഫലത്തിൻ്റെ ലിങ്ക് എവിടെ കണ്ടെത്താനാകും",
+      "പരീക്ഷാഫല വെബ്സൈറ്റ്"
+    ]
+  },
+  "responses": {
+    "en": [
+      "The exam results will be published on the official Pondicherry University website: **www.pondiuni.edu.in**. Look for a link under the 'Examinations' or 'Results' section on the homepage."
+    ],
+    "hi": [
+      "परीक्षा परिणाम पॉन्डिचेरी विश्वविद्यालय की आधिकारिक वेबसाइट **www.pondiuni.edu.in** पर प्रकाशित किए जाएंगे। होमपेज पर 'परीक्षा' या 'परिणाम' अनुभाग के तहत एक लिंक देखें।"
+    ],
+    "ml": [
+      "പരീക്ഷാഫലം പോണ്ടിച്ചേരി സർവകലാശാലയുടെ ഔദ്യോഗിക വെബ്സൈറ്റായ **www.pondiuni.edu.in**-ൽ പ്രസിദ്ധീകരിക്കും. ഹോംപേജിലെ 'എക്സാമിനേഷൻസ്' അല്ലെങ്കിൽ 'റിസൾട്ട്സ്' വിഭാഗത്തിന് കീഴിലുള്ള ലിങ്ക് പരിശോധിക്കുക."
+    ]
+  }
+},
+{
+  "tag": "bonafide_certificate_procedure",
+  "patterns": {
+    "en": [
+      "how do I get a bonafide certificate",
+      "procedure for bonafide",
+      "need a student certificate for a loan"
+    ],
+    "hi": [
+      "मुझे बोनाफाइड प्रमाण पत्र कैसे मिलेगा",
+      "बोनाफाइड के लिए प्रक्रिया",
+      "ऋण के लिए छात्र प्रमाण पत्र चाहिए"
+    ],
+    "ml": [
+      "എനിക്ക് എങ്ങനെ ഒരു ബോണഫൈഡ് സർട്ടിഫിക്കറ്റ് ലഭിക്കും",
+      "ബോണഫൈഡിനുള്ള നടപടിക്രമം",
+      "ലോണിനായി ഒരു സ്റ്റുഡൻ്റ് സർട്ടിഫിക്കറ്റ് വേണം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "To obtain a bonafide certificate, you must submit a request form, available on the university website, to your respective Head of Department. After HOD's approval, it is processed by the academic section."
+    ],
+    "hi": [
+      "बोनाफाइड प्रमाण पत्र प्राप्त करने के लिए, आपको विश्वविद्यालय की वेबसाइट पर उपलब्ध अनुरोध पत्र को अपने संबंधित विभागाध्यक्ष के पास जमा करना होगा। विभागाध्यक्ष की मंजूरी के बाद, इसे अकादमिक अनुभाग द्वारा संसाधित किया जाता है।"
+    ],
+    "ml": [
+      "ഒരു ബോണഫൈഡ് സർട്ടിഫിക്കറ്റ് ലഭിക്കുന്നതിന്, സർവകലാശാലയുടെ വെബ്സൈറ്റിൽ ലഭ്യമായ അപേക്ഷാ ഫോറം നിങ്ങളുടെ വകുപ്പ് മേധാവിക്ക് സമർപ്പിക്കണം. വകുപ്പ് മേധാവിയുടെ അംഗീകാരത്തിന് ശേഷം, അക്കാദമിക് വിഭാഗം അത് പ്രോസസ്സ് ചെയ്യും."
+    ]
+  }
+},
+{
+  "tag": "attendance_policy",
+  "patterns": {
+    "en": [
+      "what is the minimum attendance requirement",
+      "attendance policy",
+      "how much attendance do i need"
+    ],
+    "hi": [
+      "न्यूनतम उपस्थिति की आवश्यकता क्या है",
+      "उपस्थिति नीति",
+      "मुझे कितनी उपस्थिति चाहिए"
+    ],
+    "ml": [
+      "കുറഞ്ഞ ഹാജർ ആവശ്യകത എന്താണ്",
+      "ഹാജർ നയം",
+      "എനിക്ക് എത്ര ഹാജർ വേണം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Students are required to maintain a minimum of 75% attendance in each course to be eligible to appear for the end-semester examinations. A shortage below this percentage may result in being debarred from the exam."
+    ],
+    "hi": [
+      "छात्रों को एंड-सेमेस्टर परीक्षाओं में बैठने के लिए पात्र होने के लिए प्रत्येक पाठ्यक्रम में न्यूनतम 75% उपस्थिति बनाए रखना आवश्यक है। इस प्रतिशत से कम उपस्थिति होने पर परीक्षा से वंचित किया जा सकता है।"
+    ],
+    "ml": [
+      "അവസാന സെമസ്റ്റർ പരീക്ഷകളിൽ പങ്കെടുക്കാൻ യോഗ്യത നേടുന്നതിന് വിദ്യാർത്ഥികൾ ഓരോ കോഴ്സിലും കുറഞ്ഞത് 75% ഹാജർ നിലനിർത്തേണ്ടതുണ്ട്. ഈ ശതമാനത്തിൽ താഴെയുള്ള ഹാജർ കുറവ് പരീക്ഷയിൽ നിന്ന് വിലക്കുന്നതിന് കാരണമായേക്കാം."
+    ]
+  }
+},
+{
+  "tag": "atm_locations_detailed",
+  "patterns": {
+    "en": [
+      "exact location details of atm",
+      "where are the atms on campus",
+      "specific atm locations"
+    ],
+    "hi": [
+      "एटीएम के सटीक स्थान का विवरण",
+      "कैंपस में एटीएम कहाँ हैं",
+      "विशिष्ट एटीएम स्थान"
+    ],
+    "ml": [
+      "എടിഎമ്മിന്റെ കൃത്യമായ ലൊക്കേഷൻ വിശദാംശങ്ങൾ",
+      "ക്യാമ്പസിലെ എടിഎമ്മുകൾ എവിടെയാണ്",
+      "പ്രത്യേക എടിഎം ലൊക്കേഷനുകൾ"
+    ]
+  },
+  "responses": {
+    "en": [
+      "You can find ATMs at several key locations on campus:\n- **SBI ATM:** One is located near the main entrance on East Coast Road, and another is inside the shopping complex.\n- **Indian Bank ATM:** This is located at the Indian Bank branch within the shopping complex.\n- **HDFC Bank ATM:** You can find one near the university entrance on ECR Road.\n- **Axis Bank ATM:** This is also located within the main university campus area."
+    ],
+    "hi": [
+      "आप परिसर में कई प्रमुख स्थानों पर एटीएम पा सकते हैं:\n- **एसबीआई एटीएम:** एक ईस्ट कोस्ट रोड पर मुख्य प्रवेश द्वार के पास स्थित है, और दूसरा शॉपिंग कॉम्प्लेक्स के अंदर है।\n- **इंडियन बैंक एटीएम:** यह शॉपिंग कॉम्प्लेक्स के भीतर इंडियन बैंक शाखा में स्थित है।\n- **एचडीएफसी बैंक एटीएम:** आप ईसीआर रोड पर विश्वविद्यालय के प्रवेश द्वार के पास एक पा सकते हैं।\n- **एक्सिस बैंक एटीएम:** यह भी मुख्य विश्वविद्यालय परिसर क्षेत्र के भीतर स्थित है।"
+    ],
+    "ml": [
+      "ക്യാമ്പസിലെ നിരവധി പ്രധാന സ്ഥലങ്ങളിൽ നിങ്ങൾക്ക് എടിഎമ്മുകൾ കണ്ടെത്താനാകും:\n- **എസ്ബിഐ എടിഎം:** ഒന്ന് ഈസ്റ്റ് കോസ്റ്റ് റോഡിലെ പ്രധാന പ്രവേശന കവാടത്തിന് സമീപവും മറ്റൊന്ന് ഷോപ്പിംഗ് കോംപ്ലക്സിനുള്ളിലും സ്ഥിതിചെയ്യുന്നു.\n- **ഇന്ത്യൻ ബാങ്ക് എടിഎം:** ഇത് ഷോപ്പിംഗ് കോംപ്ലക്സിനുള്ളിലെ ഇന്ത്യൻ ബാങ്ക് ശാഖയിൽ സ്ഥിതിചെയ്യുന്നു.\n- **എച്ച്ഡിഎഫ്സി ബാങ്ക് എടിഎം:** ഇസിആർ റോഡിലെ സർവകലാശാലാ പ്രവേശന കവാടത്തിന് സമീപം ഒന്ന് കണ്ടെത്താം.\n- **ആക്സിസ് ബാങ്ക് എടിഎം:** ഇതും പ്രധാന യൂണിവേഴ്സിറ്റി ക്യാമ്പസ് ഏരിയയ്ക്കുള്ളിൽ സ്ഥിതിചെയ്യുന്നു."
+    ]
+  }
+},
+{
+  "tag": "bank_details_campus",
+  "patterns": {
+    "en": [
+      "bank details in campus",
+      "which bank is on campus",
+      "university bank branch location"
+    ],
+    "hi": [
+      "कैंपस में बैंक का विवरण",
+      "कैंपस में कौन सा बैंक है",
+      "विश्वविद्यालय की बैंक शाखा का स्थान"
+    ],
+    "ml": [
+      "ക്യാമ്പസിലെ ബാങ്ക് വിശദാംശങ്ങൾ",
+      "ക്യാമ്പസിൽ ഏത് ബാങ്കാണ് ഉള്ളത്",
+      "സർവകലാശാലയുടെ ബാങ്ക് ശാഖയുടെ സ്ഥാനം"
+    ]
+  },
+  "responses": {
+    "en": [
+      "There is an Indian Bank branch located inside the Pondicherry University shopping complex. It provides all regular banking services for students and staff."
+    ],
+    "hi": [
+      "पॉन्डिचेरी विश्वविद्यालय के शॉपिंग कॉम्प्लेक्स के अंदर एक इंडियन बैंक की शाखा स्थित है। यह छात्रों और कर्मचारियों के लिए सभी नियमित बैंकिंग सेवाएं प्रदान करती है।"
+    ],
+    "ml": [
+      "പോണ്ടിച്ചേരി സർവകലാശാലയുടെ ഷോപ്പിംഗ് കോംപ്ലക്സിനുള്ളിൽ ഒരു ഇന്ത്യൻ ബാങ്ക് ശാഖയുണ്ട്. ഇത് വിദ്യാർത്ഥികൾക്കും ജീവനക്കാർക്കും എല്ലാ സാധാരണ ബാങ്കിംഗ് സേവനങ്ങളും നൽകുന്നു."
+    ]
+  }
+},
+{
+  "tag": "facilities_for_disabled",
+  "patterns": {
+    "en": [
+      "facilities for handicapped students",
+      "support for disabled students",
+      "disability services",
+      "facilities for persons with disabilities"
+    ],
+    "hi": [
+      "विकलांग छात्रों के लिए सुविधाएं",
+      "विकलांगों के लिए सहायता",
+      "दिव्यांगों के लिए सुविधाएं"
+    ],
+    "ml": [
+      "വികലാംഗരായ വിദ്യാർത്ഥികൾക്കുള്ള സൗകര്യങ്ങൾ",
+      "ഭിന്നശേഷിക്കാർക്കുള്ള പിന്തുണ",
+      "വികലാംഗർക്കുള്ള സേവനങ്ങൾ"
+    ]
+  },
+  "responses": {
+    "en": [
+      "Pondicherry University is committed to providing an inclusive environment. Facilities for persons with disabilities include ramps and elevators in all buildings, specially designed washrooms, and academic support like scribes for examinations. The university also adheres to government reservation policies for admissions and offers fee concessions."
+    ],
+    "hi": [
+      "पॉन्डिचेरी विश्वविद्यालय एक समावेशी वातावरण प्रदान करने के लिए प्रतिबद्ध है। विकलांग व्यक्तियों के लिए सुविधाओं में सभी इमारतों में रैंप और लिफ्ट, विशेष रूप से डिजाइन किए गए वॉशरूम और परीक्षाओं के लिए लेखकों जैसी शैक्षणिक सहायता शामिल है। विश्वविद्यालय प्रवेश के लिए सरकारी आरक्षण नीतियों का भी पालन करता है और शुल्क में रियायतें प्रदान करता है।"
+    ],
+    "ml": [
+      "പോണ്ടിച്ചേരി സർവ്വകലാശാല ഭിന്നശേഷി സൗഹൃദമായ ഒരു അന്തരീക്ഷം ഒരുക്കുന്നതിൽ പ്രതിജ്ഞാബദ്ധമാണ്. എല്ലാ കെട്ടിടങ്ങളിലും റാമ്പുകളും എലിവേറ്ററുകളും, പ്രത്യേകമായി രൂപകൽപ്പന ചെയ്ത ശുചിമുറികളും, പരീക്ഷകൾക്ക് സഹായിയെപ്പോലുള്ള അക്കാദമിക് പിന്തുണയും ഭിന്നശേഷിക്കാർക്കുള്ള സൗകര്യങ്ങളിൽ ഉൾപ്പെടുന്നു. പ്രവേശനത്തിനുള്ള സർക്കാർ സംവരണ നയങ്ങളും ഫീസ് ഇളവുകളും സർവകലാശാല വാഗ്ദാനം ചെയ്യുന്നു."
+    ]
+  }
+},
+{
+  "tag": "irdc_details",
+  "patterns": {
+    "en": [
+      "what is irdc",
+      "tell me about irdc",
+      "industrial research and development cell"
+    ],
+    "hi": [
+      "आईआरडीसी क्या है",
+      "आईआरडीसी के बारे में बताएं",
+      "औद्योगिक अनुसंधान और विकास प्रकोष्ठ"
+    ],
+    "ml": [
+      "എന്താണ് ഐആർഡിസി",
+      "ഐആർഡിസിയെക്കുറിച്ച് പറയൂ",
+      "ഇൻഡസ്ട്രിയൽ റിസർച്ച് ആൻഡ് ഡെവലപ്മെൻ്റ് സെൽ"
+    ]
+  },
+  "responses": {
+    "en": [
+      "IRDC likely stands for the Industrial Research, Development, and Consultancy cell. It's the university's central body for managing sponsored research projects, fostering collaborations between the university and industries, and handling consultancy services offered by the faculty to external organizations."
+    ],
+    "hi": [
+      "आईआरडीसी का मतलब औद्योगिक अनुसंधान, विकास और परामर्श सेल है। यह विश्वविद्यालय का केंद्रीय निकाय है जो प्रायोजित अनुसंधान परियोजनाओं का प्रबंधन करता है, विश्वविद्यालय और उद्योगों के बीच सहयोग को बढ़ावा देता है, और संकाय द्वारा बाहरी संगठनों को दी जाने वाली परामर्श सेवाओं को संभालता है।"
+    ],
+    "ml": [
+      "ഐആർഡിസി എന്നത് ഇൻഡസ്ട്രിയൽ റിസർച്ച്, ഡെവലപ്‌മെൻ്റ്, കൺസൾട്ടൻസി സെല്ലിനെയാണ് സൂചിപ്പിക്കുന്നത്. സ്പോൺസേർഡ് ഗവേഷണ പ്രോജക്ടുകൾ കൈകാര്യം ചെയ്യുന്നതിനും, സർവകലാശാലയും വ്യവസായങ്ങളും തമ്മിലുള്ള സഹകരണം വളർത്തുന്നതിനും, ഫാക്കൽറ്റി ബാഹ്യ സ്ഥാപനങ്ങൾക്ക് നൽകുന്ന കൺസൾട്ടൻസി സേവനങ്ങൾ ഏകോപിപ്പിക്കുന്നതിനുമുള്ള സർവകലാശാലയുടെ കേന്ദ്ര ഘടകമാണിത്."
+    ]
+  }
+},
+{
+  "tag": "pu_electrical_complaint",
+  "patterns": {
+    "en": [
+      "Pondicherry University electrical complaint",
+      "How to file an electricity complaint at Pondicherry University?",
+      "Contact number for electrical issues in Pondicherry University"
+    ],
+    "hi": [
+      "पांडिचेरी विश्वविद्यालय बिजली की शिकायत",
+      "पांडिचेरी विश्वविद्यालय में बिजली की शिकायत कैसे दर्ज करें?",
+      "पांडिचेरी विश्वविद्यालय में बिजली की समस्याओं के लिए संपर्क नंबर"
+    ],
+    "ml": [
+      "പോണ്ടിച്ചേരി സർവകലാശാലയിലെ ഇലക്ട്രിക്കൽ പരാതി",
+      "പോണ്ടിച്ചേരി സർവകലാശാലയിൽ വൈദ്യുതി സംബന്ധമായ പരാതി എങ്ങനെ നൽകാം?",
+      "പോണ്ടിച്ചേരി സർവകലാശാലയിലെ ഇലക്ട്രിക്കൽ പ്രശ്നങ്ങൾക്കുള്ള കോൺടാക്റ്റ് നമ്പർ"
+    ]
+  },
+  "responses": {
+    "en": [
+      "For electrical complaints at Pondicherry University, you should contact the Electrical Wing of the Engineering Department. You can reach the Assistant Engineer (Electrical) by calling the complaint booking numbers: 0413-2655848 or 0413-2654256. They handle all maintenance and complaint resolutions for electrical infrastructure on campus."
+    ],
+    "hi": [
+      "पांडिचेरी विश्वविद्यालय में बिजली संबंधी शिकायतों के लिए, आपको इंजीनियरिंग विभाग के इलेक्ट्रिकल विंग से संपर्क करना चाहिए। आप शिकायत बुकिंग नंबर: 0413-2655848 या 0413-2654256 पर कॉल करके सहायक अभियंता (विद्युत) तक पहुँच सकते हैं। वे परिसर में बिजली के बुनियादी ढाँचे के सभी रखरखाव और शिकायतों का समाधान करते हैं।"
+    ],
+    "ml": [
+      "പോണ്ടിച്ചേരി സർവകലാശാലയിലെ വൈദ്യുത സംബന്ധമായ പരാതികൾക്ക്, നിങ്ങൾ എഞ്ചിനീയറിംഗ് ഡിപ്പാർട്ട്‌മെന്റിന്റെ ഇലക്ട്രിക്കൽ വിംഗുമായി ബന്ധപ്പെടണം. നിങ്ങൾക്ക് അസിസ്റ്റന്റ് എഞ്ചിനീയറെ (ഇലക്ട്രിക്കൽ) പരാതി ബുക്കിംഗ് നമ്പറുകളിൽ വിളിച്ച് ബന്ധപ്പെടാം: 0413-2655848 അല്ലെങ്കിൽ 0413-2654256. കാമ്പസിലെ ഇലക്ട്രിക്കൽ ഇൻഫ്രാസ്ട്രക്ചറിന്റെ എല്ലാ അറ്റകുറ്റപ്പണികളും പരാതി പരിഹാരങ്ങളും അവർ കൈകാര്യം ചെയ്യുന്നു."
+    ]
+  }
+},
+{
+      "tag": "vice_chancellor",
+      "patterns": {
+        "en": [
+          "Who is the Vice Chancellor of Pondicherry University?",
+          "Name of the Vice Chancellor of Pondicherry University",
+          "Current VC of Pondicherry University",
+          "Pondicherry University VC name"
+        ],
+        "hi": [
+          "पांडिचेरी विश्वविद्यालय के कुलपति कौन हैं?",
+          "पांडिचेरी विश्वविद्यालय के वर्तमान कुलपति का नाम",
+          "पांडिचेरी विश्वविद्यालय के कुलपति का नाम बताएं"
+        ],
+        "ml": [
+          "പോണ്ടിച്ചേരി സർവകലാശാലയുടെ വൈസ് ചാൻസലർ ആരാണ്?",
+          "പോണ്ടിച്ചേരി സർവകലാശാലയുടെ നിലവിലെ വൈസ് ചാൻസലർ ആരാണ്?",
+          "പോണ്ടിച്ചേരി സർവകലാശാല വി.സി ആര്?"
+        ]
+      },
+      "responses": {
+        "en": [
+          "The Vice-Chancellor of Pondicherry University is Prof. P. Prakash Babu."
+        ],
+        "hi": [
+          "पांडिचेरी विश्वविद्यालय के कुलपति प्रो. पी. प्रकाश बाबू हैं।"
+        ],
+        "ml": [
+          "പോണ്ടിച്ചേരി സർവകലാശാലയുടെ വൈസ് ചാൻസലർ പ്രൊഫ്. പി. പ്രകാശ് ബാബു ആണ്."
+        ]
+      }
+    },
+    {
+  "tag": "student_council",
+  "patterns": {
+    "en": [
+      "who is in the current student council",
+      "current student council",
+      "who leads the student council",
+      "which group controls the student council",
+      "student council members",
+      "who runs the student council"
+    ],
+    "hi": [
+      "वर्तमान छात्र परिषद में कौन है",
+      "छात्र परिषद कौन चलाता है",
+      "छात्र परिषद के सदस्य कौन हैं"
+    ],
+    "ml": [
+      "നിലവിലെ വിദ്യാർത്ഥി കൗൺസിലിൽ ആരാണ്",
+      "വിദ്യാർത്ഥി കൗൺസിൽ ആരാണ് നയിക്കുന്നത്"
+    ]
+  },
+  "responses": {
+    "en": [
+      "The current student council of Pondicherry University is led by **SFI (Students’ Federation of India)**."
+    ],
+    "hi": [
+      "पांडिचेरी विश्वविद्यालय की वर्तमान छात्र परिषद **एसएफआई (छात्र महासंघ)** द्वारा संचालित है।"
+    ],
+    "ml": [
+      "പോണ്ടിച്ചേരി സർവകലാശാലയിലെ നിലവിലെ വിദ്യാർത്ഥി കൗൺസിൽ **എസ്‌എഫ്‌ഐ (Students’ Federation of India)** ആണ് നയിക്കുന്നത്."
+    ]
+  }
+}
+
+
+
+
+  ]
+  
+}
